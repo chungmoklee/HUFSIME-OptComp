@@ -7,7 +7,7 @@
 // 서버 API 없이 정적 파일만 읽는다. 한 리포에 여러 대회를 두고 골라 본다.
 
 const $ = (s) => document.querySelector(s);
-const state = { comps: [], comp: null, index: null, kind: "leaderboard", rows: [], tz: "UTC" };
+const state = { comps: [], comp: null, index: null, kind: "leaderboard", rows: [], tz: "UTC", ms: null };
 
 // 현재 대회의 데이터 경로
 const dataPath = (rest) => `competitions/${state.comp}/data/${rest}`;
@@ -21,7 +21,6 @@ const parseStamp = (s) => {
   const [day, file] = s.split("/");
   return { day, hour: file.slice(-2) };
 };
-const fmtDay = (d) => `${d.slice(0, 4)}-${d.slice(4, 6)}-${d.slice(6, 8)}`;
 
 // ── 시간대 ────────────────────────────────────────────────────────────────
 // 서버가 남기는 시각은 모두 UTC 다(스냅샷 파일명, generated_at, submitted_at).
@@ -62,16 +61,6 @@ function fmtTime(text, withSeconds = false) {
                      : `${base}`;
 }
 
-// 스냅샷은 UTC 정각 단위다. 선택 시간대에서의 "날짜 시각" 문자열로 바꾼다.
-function stampLabel(day, hour) {
-  const iso = `${day.slice(0, 4)}-${day.slice(4, 6)}-${day.slice(6, 8)}T${hour}:00:00Z`;
-  const d = new Date(iso);
-  const s = new Date(d.getTime() + TZ_OFFSET[state.tz] * 3600e3);
-  return {
-    day: `${s.getUTCFullYear()}-${pad2(s.getUTCMonth() + 1)}-${pad2(s.getUTCDate())}`,
-    hour: `${pad2(s.getUTCHours())}:00`,
-  };
-}
 
 async function getJSON(path) {
   const r = await fetch(path, { cache: "no-cache" });
@@ -83,33 +72,63 @@ function stampsFor(kind) {
   return (state.index.kinds && state.index.kinds[kind]) || [];
 }
 
-function fillDates() {
-  const days = [...new Set(stampsFor(state.kind).map((s) => parseStamp(s).day))].sort().reverse();
-  const sel = $("#sel-date");
-  // value 는 UTC 기준 파일명(그대로 fetch 에 쓴다), 라벨만 선택 시간대로 보인다.
-  sel.innerHTML = days.map((d) => `<option value="${d}">${fmtDay(d)}</option>`).join("");
-  fillHours();
+// ── 시점 선택 ─────────────────────────────────────────────────────────────
+// 스냅샷은 UTC 매시 정각에만 존재한다. datetime-local 은 임의 시각을 고를 수
+// 있으므로, 고른 값에서 가장 가까운(그 이전의) 스냅샷으로 맞춰 준다.
+
+// 스냅샷 "20260910/20260910_23" -> UTC epoch(ms)
+function stampToMs(stamp) {
+  const { day, hour } = parseStamp(stamp);
+  return Date.parse(`${day.slice(0, 4)}-${day.slice(4, 6)}-${day.slice(6, 8)}T${hour}:00:00Z`);
 }
 
-function fillHours() {
-  const day = $("#sel-date").value;
-  const hours = stampsFor(state.kind)
-    .map(parseStamp).filter((p) => p.day === day).map((p) => p.hour)
-    .sort().reverse();
-  const sel = $("#sel-hour");
-  const day2 = $("#sel-date").value;
-  sel.innerHTML = hours.map((h) => {
-    const L = stampLabel(day2, h);
-    // KST 로 보면 날짜가 넘어갈 수 있어(UTC 15:00 = KST 익일 00:00) 날짜도 함께 보인다.
-    const label = L.day === fmtDay(day2) ? L.hour : `${L.hour} (${L.day})`;
-    return `<option value="${h}">${label}</option>`;
-  }).join("");
+// UTC epoch -> 선택 시간대의 "YYYY-MM-DDTHH:00" (datetime-local 의 value 형식)
+function msToLocalInput(ms) {
+  const s = new Date(ms + TZ_OFFSET[state.tz] * 3600e3);
+  return `${s.getUTCFullYear()}-${pad2(s.getUTCMonth() + 1)}-${pad2(s.getUTCDate())}` +
+         `T${pad2(s.getUTCHours())}:00`;
+}
+
+// datetime-local 의 value(선택 시간대 기준) -> UTC epoch
+function localInputToMs(v) {
+  const ms = Date.parse(v + ":00Z");          // 일단 UTC 로 읽고
+  return isNaN(ms) ? NaN : ms - TZ_OFFSET[state.tz] * 3600e3;  // 시간대만큼 되돌린다
+}
+
+// 고른 시각 이하에서 가장 최근 스냅샷. 더 이른 것이 없으면 가장 오래된 것.
+function nearestStamp(targetMs) {
+  const list = stampsFor(state.kind).map((st) => ({ st, ms: stampToMs(st) }))
+    .filter((x) => !isNaN(x.ms)).sort((a, b) => a.ms - b.ms);
+  if (!list.length) return null;
+  let pick = list[0];
+  for (const x of list) if (x.ms <= targetMs) pick = x;
+  return pick;
+}
+
+function latestStamp() {
+  const list = stampsFor(state.kind).map(stampToMs).filter((x) => !isNaN(x));
+  return list.length ? Math.max(...list) : null;
+}
+
+// 입력 위젯의 선택 가능 범위와 현재 값을 갱신한다.
+function syncPicker() {
+  const list = stampsFor(state.kind).map(stampToMs).filter((x) => !isNaN(x));
+  const el = $("#sel-when");
+  if (!list.length) { el.value = ""; return; }
+  el.min = msToLocalInput(Math.min(...list));
+  el.max = msToLocalInput(Math.max(...list));
+  if (state.ms == null) state.ms = Math.max(...list);
+  el.value = msToLocalInput(state.ms);
 }
 
 async function loadBoard() {
-  const day = $("#sel-date").value, hour = $("#sel-hour").value;
   const tbody = $("#tbl tbody");
-  if (!day || !hour) { tbody.innerHTML = ""; $("#empty").hidden = false; return; }
+  const pick = state.ms == null ? null : nearestStamp(state.ms);
+  if (!pick) { tbody.innerHTML = ""; $("#empty").hidden = false; return; }
+  // 고른 시각에 스냅샷이 없으면 그 이전의 가장 가까운 것으로 맞춘다.
+  state.ms = pick.ms;
+  $("#sel-when").value = msToLocalInput(pick.ms);
+  const { day, hour } = parseStamp(pick.st);
   try {
     const data = await getJSON(dataPath(`${state.kind}/${day}/${day}_${hour}.json`));
     state.rows = data.leaderboard || [];
@@ -202,7 +221,8 @@ async function loadCompetition(name) {
   const meta = state.comps.find((c) => c.name === name);
   $("#title").textContent = (meta && meta.label) || name;
   state.index = await getJSON(dataPath("index.json"));
-  fillDates();
+  state.ms = latestStamp();     // 대회를 바꾸면 그 대회의 최신 시점으로
+  syncPicker();
   await loadBoard();
 }
 
@@ -213,15 +233,17 @@ function bind() {
   $("#sel-tz").addEventListener("change", (e) => {
     state.tz = e.target.value;
     try { localStorage.setItem("ogc.tz", state.tz); } catch { /* 저장 실패는 무시 */ }
-    fillHours();            // 시각 라벨 다시 그리기
+    syncPicker();           // 입력값을 새 시간대 표기로 다시 쓴다
     loadBoard();            // 생성 시각 문구 갱신
     $("#overlay").hidden = true;   // 열려 있던 상세는 닫는다(시각 표기가 섞이지 않게)
   });
-  $("#sel-kind").addEventListener("change", (e) => {
-    state.kind = e.target.value; fillDates(); loadBoard();
+  $("#sel-when").addEventListener("change", (e) => {
+    const ms = localInputToMs(e.target.value);
+    if (!isNaN(ms)) { state.ms = ms; loadBoard(); }
   });
-  $("#sel-date").addEventListener("change", () => { fillHours(); loadBoard(); });
-  $("#sel-hour").addEventListener("change", loadBoard);
+  $("#btn-latest").addEventListener("click", () => {
+    state.ms = latestStamp(); syncPicker(); loadBoard();
+  });
   $("#tbl").addEventListener("click", (e) => {
     const b = e.target.closest(".team-btn");
     if (b) showTeam(b.dataset.team);

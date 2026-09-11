@@ -11,14 +11,10 @@
   <h1 id="title">Optimization Challenge</h1>
   <div class="controls">
     <label>대회 <select id="sel-comp"></select></label>
-    <label>날짜 <select id="sel-date"></select></label>
-    <label>시각 <select id="sel-hour"></select></label>
-    <label>구분
-      <select id="sel-kind">
-        <option value="leaderboard">개인 순위</option>
-        <option value="leaderboard_group">그룹 순위</option>
-      </select>
+    <label>시점
+      <input type="datetime-local" id="sel-when" step="3600">
     </label>
+    <button id="btn-latest" type="button">최신</button>
     <label>시간대
       <select id="sel-tz">
         <option value="KST">KST (UTC+9)</option>
