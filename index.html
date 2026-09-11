@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>OGC 2026 리더보드</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+  <h1 id="title">Optimization Challenge</h1>
+  <div class="controls">
+    <label>대회 <select id="sel-comp"></select></label>
+    <label>날짜 <select id="sel-date"></select></label>
+    <label>시각 <select id="sel-hour"></select></label>
+    <label>구분
+      <select id="sel-kind">
+        <option value="leaderboard">개인 순위</option>
+        <option value="leaderboard_group">그룹 순위</option>
+      </select>
+    </label>
+  </div>
+  <p id="generated" class="muted"></p>
+</header>
+
+<main>
+  <section id="board">
+    <table id="tbl">
+      <thead><tr><th class="rank">순위</th><th>팀</th><th class="score">점수</th></tr></thead>
+      <tbody></tbody>
+    </table>
+    <p id="empty" class="muted" hidden>해당 시각의 리더보드가 없습니다.</p>
+  </section>
+</main>
+
+<div id="overlay" hidden>
+  <div id="panel">
+    <button id="close">닫기</button>
+    <h2 id="d-team"></h2>
+    <p id="d-sum" class="muted"></p>
+    <div id="d-body"></div>
+  </div>
+</div>
+
+<footer class="muted">
+  스냅샷은 매시 정각에 갱신됩니다. 팀명을 누르면 제출 이력을 볼 수 있습니다.
+</footer>
+<script src="app.js"></script>
+</body>
+</html>

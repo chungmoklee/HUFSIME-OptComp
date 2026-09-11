@@ -1,0 +1,25 @@
+{
+ "generated_at": "2026-09-10 13:00:00 UTC",
+ "leaderboard": [
+  {
+   "team_id": "TEAM1000",
+   "team_name": "test",
+   "nb_P3": 1,
+   "P3_score": -1,
+   "nb_P2": 1,
+   "P2_score": -1,
+   "nb_P1": 1,
+   "P1_score": -1,
+   "nb_P6": 1,
+   "P6_score": -1,
+   "nb_P4": 1,
+   "P4_score": -1,
+   "nb_P5": 1,
+   "P5_score": -1,
+   "total_score": -6,
+   "ranking": 1,
+   "nationality": null,
+   "affiliation": null
+  }
+ ]
+}

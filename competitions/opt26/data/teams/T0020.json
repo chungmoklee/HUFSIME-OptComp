@@ -1,0 +1,195 @@
+{
+ "generated_at": "2026-09-10 23:20:49 UTC",
+ "team_id": "T0020",
+ "submissions": [
+  {
+   "submission_id": 67,
+   "submitted_at": "2026-09-10T11:20:00",
+   "eval_status": "done",
+   "eval_started_at": "2026-09-10T11:20:15",
+   "eval_finished_at": "2026-09-10T11:20:18",
+   "eval_result": {
+    "team_id": "T0020",
+    "team_name": "차현우(2022**460)",
+    "submission_time": "2026-09-10 11:20:00",
+    "eval_time": "2026-09-10 11:23:00",
+    "test_results": {
+     "P1": {
+      "prob_name": "P1",
+      "obj": 10429.34,
+      "time": 14.531,
+      "status": "ok",
+      "status_detail": "",
+      "exception": ""
+     },
+     "P2": {
+      "prob_name": "P2",
+      "obj": 19675.86,
+      "time": 3.882,
+      "status": "ok",
+      "status_detail": "",
+      "exception": ""
+     },
+     "P3": {
+      "prob_name": "P3",
+      "obj": 29392.22,
+      "time": 17.423,
+      "status": "ok",
+      "status_detail": "",
+      "exception": ""
+     },
+     "P4": {
+      "prob_name": "P4",
+      "obj": 12442.41,
+      "time": 11.248,
+      "status": "ok",
+      "status_detail": "",
+      "exception": ""
+     },
+     "P5": {
+      "prob_name": "P5",
+      "obj": 32829.15,
+      "time": 17.372,
+      "status": "ok",
+      "status_detail": "",
+      "exception": ""
+     },
+     "P6": {
+      "prob_name": "P6",
+      "obj": 55047.19,
+      "time": 2.423,
+      "status": "ok",
+      "status_detail": "",
+      "exception": ""
+     }
+    }
+   }
+  },
+  {
+   "submission_id": 68,
+   "submitted_at": "2026-09-10T13:20:00",
+   "eval_status": "done",
+   "eval_started_at": "2026-09-10T13:20:15",
+   "eval_finished_at": "2026-09-10T13:20:18",
+   "eval_result": {
+    "team_id": "T0020",
+    "team_name": "차현우(2022**460)",
+    "submission_time": "2026-09-10 13:20:00",
+    "eval_time": "2026-09-10 13:23:00",
+    "test_results": {
+     "P1": {
+      "prob_name": "P1",
+      "obj": 9712.63,
+      "time": 16.597,
+      "status": "ok",
+      "status_detail": "",
+      "exception": ""
+     },
+     "P2": {
+      "prob_name": "P2",
+      "obj": 18290.3,
+      "time": 6.877,
+      "status": "ok",
+      "status_detail": "",
+      "exception": ""
+     },
+     "P3": {
+      "prob_name": "P3",
+      "obj": 27418.62,
+      "time": 14.193,
+      "status": "ok",
+      "status_detail": "",
+      "exception": ""
+     },
+     "P4": {
+      "prob_name": "P4",
+      "obj": 11552.69,
+      "time": 2.998,
+      "status": "ok",
+      "status_detail": "",
+      "exception": ""
+     },
+     "P5": {
+      "prob_name": "P5",
+      "obj": 30268.96,
+      "time": 8.95,
+      "status": "ok",
+      "status_detail": "",
+      "exception": ""
+     },
+     "P6": {
+      "prob_name": "P6",
+      "obj": 50421.17,
+      "time": 13.54,
+      "status": "ok",
+      "status_detail": "",
+      "exception": ""
+     }
+    }
+   }
+  },
+  {
+   "submission_id": 28,
+   "submitted_at": "2026-09-10T15:20:00",
+   "eval_status": "done",
+   "eval_started_at": "2026-09-10T15:20:15",
+   "eval_finished_at": "2026-09-10T15:20:18",
+   "eval_result": {
+    "team_id": "T0020",
+    "team_name": "차현우(2022**460)",
+    "submission_time": "2026-09-10 15:20:00",
+    "eval_time": "2026-09-10 15:23:00",
+    "test_results": {
+     "P1": {
+      "prob_name": "P1",
+      "obj": 9069.97,
+      "time": 22.425,
+      "status": "ok",
+      "status_detail": "",
+      "exception": ""
+     },
+     "P2": {
+      "prob_name": "P2",
+      "obj": 17108.25,
+      "time": 20.953,
+      "status": "ok",
+      "status_detail": "",
+      "exception": ""
+     },
+     "P3": {
+      "prob_name": "P3",
+      "obj": 25710.25,
+      "time": 3.862,
+      "status": "ok",
+      "status_detail": "",
+      "exception": ""
+     },
+     "P4": {
+      "prob_name": "P4",
+      "obj": 10858.35,
+      "time": 8.481,
+      "status": "ok",
+      "status_detail": "",
+      "exception": ""
+     },
+     "P5": {
+      "prob_name": "P5",
+      "obj": 28270.11,
+      "time": 4.359,
+      "status": "ok",
+      "status_detail": "",
+      "exception": ""
+     },
+     "P6": {
+      "prob_name": "P6",
+      "obj": 47455.35,
+      "time": 10.239,
+      "status": "ok",
+      "status_detail": "",
+      "exception": ""
+     }
+    }
+   }
+  }
+ ]
+}
