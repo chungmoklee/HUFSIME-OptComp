@@ -7,7 +7,7 @@
 // 서버 API 없이 정적 파일만 읽는다. 한 리포에 여러 대회를 두고 골라 본다.
 
 const $ = (s) => document.querySelector(s);
-const state = { comps: [], comp: null, index: null, kind: "leaderboard", rows: [] };
+const state = { comps: [], comp: null, index: null, kind: "leaderboard", rows: [], tz: "UTC" };
 
 // 현재 대회의 데이터 경로
 const dataPath = (rest) => `competitions/${state.comp}/data/${rest}`;
@@ -23,6 +23,56 @@ const parseStamp = (s) => {
 };
 const fmtDay = (d) => `${d.slice(0, 4)}-${d.slice(4, 6)}-${d.slice(6, 8)}`;
 
+// ── 시간대 ────────────────────────────────────────────────────────────────
+// 서버가 남기는 시각은 모두 UTC 다(스냅샷 파일명, generated_at, submitted_at).
+// 한국 참가자에게는 UTC 가 낯설어 기본을 KST 로 두되, 해외 접속자는 UTC 가
+// 자연스러우므로 브라우저 시간대를 보고 정한다.
+const TZ_OFFSET = { KST: 9, UTC: 0 };
+
+function defaultTz() {
+  try {
+    const z = Intl.DateTimeFormat().resolvedOptions().timeZone || "";
+    if (z === "Asia/Seoul") return "KST";
+    // 시간대 이름을 못 얻는 브라우저를 위해 오프셋으로도 판단한다.
+    if (-new Date().getTimezoneOffset() === 540) return "KST";
+  } catch { /* 판단 불가 — 아래 기본값 */ }
+  return "UTC";
+}
+
+// "2026-09-10 23:20:49 UTC" / "2026-09-10T09:07:00" 등을 UTC 로 해석한다.
+// 뒤에 시간대 표시가 없어도 서버 값은 UTC 이므로 Z 를 붙여 파싱한다.
+function parseUTC(text) {
+  if (!text) return null;
+  let t = String(text).trim().replace(/\s+UTC$/i, "").replace(" ", "T");
+  if (!/[zZ]|[+-]\d{2}:?\d{2}$/.test(t)) t += "Z";
+  const d = new Date(t);
+  return isNaN(d.getTime()) ? null : d;
+}
+
+const pad2 = (n) => String(n).padStart(2, "0");
+
+// UTC 시각을 현재 선택한 시간대로 표시한다.
+function fmtTime(text, withSeconds = false) {
+  const d = parseUTC(text);
+  if (!d) return text || "-";
+  const shifted = new Date(d.getTime() + TZ_OFFSET[state.tz] * 3600e3);
+  const base = `${shifted.getUTCFullYear()}-${pad2(shifted.getUTCMonth() + 1)}-` +
+    `${pad2(shifted.getUTCDate())} ${pad2(shifted.getUTCHours())}:${pad2(shifted.getUTCMinutes())}`;
+  return withSeconds ? `${base}:${pad2(shifted.getUTCSeconds())} ${state.tz}`
+                     : `${base}`;
+}
+
+// 스냅샷은 UTC 정각 단위다. 선택 시간대에서의 "날짜 시각" 문자열로 바꾼다.
+function stampLabel(day, hour) {
+  const iso = `${day.slice(0, 4)}-${day.slice(4, 6)}-${day.slice(6, 8)}T${hour}:00:00Z`;
+  const d = new Date(iso);
+  const s = new Date(d.getTime() + TZ_OFFSET[state.tz] * 3600e3);
+  return {
+    day: `${s.getUTCFullYear()}-${pad2(s.getUTCMonth() + 1)}-${pad2(s.getUTCDate())}`,
+    hour: `${pad2(s.getUTCHours())}:00`,
+  };
+}
+
 async function getJSON(path) {
   const r = await fetch(path, { cache: "no-cache" });
   if (!r.ok) throw new Error(`${r.status} ${path}`);
@@ -36,6 +86,7 @@ function stampsFor(kind) {
 function fillDates() {
   const days = [...new Set(stampsFor(state.kind).map((s) => parseStamp(s).day))].sort().reverse();
   const sel = $("#sel-date");
+  // value 는 UTC 기준 파일명(그대로 fetch 에 쓴다), 라벨만 선택 시간대로 보인다.
   sel.innerHTML = days.map((d) => `<option value="${d}">${fmtDay(d)}</option>`).join("");
   fillHours();
 }
@@ -46,7 +97,13 @@ function fillHours() {
     .map(parseStamp).filter((p) => p.day === day).map((p) => p.hour)
     .sort().reverse();
   const sel = $("#sel-hour");
-  sel.innerHTML = hours.map((h) => `<option value="${h}">${h}:00</option>`).join("");
+  const day2 = $("#sel-date").value;
+  sel.innerHTML = hours.map((h) => {
+    const L = stampLabel(day2, h);
+    // KST 로 보면 날짜가 넘어갈 수 있어(UTC 15:00 = KST 익일 00:00) 날짜도 함께 보인다.
+    const label = L.day === fmtDay(day2) ? L.hour : `${L.hour} (${L.day})`;
+    return `<option value="${h}">${label}</option>`;
+  }).join("");
 }
 
 async function loadBoard() {
@@ -56,7 +113,7 @@ async function loadBoard() {
   try {
     const data = await getJSON(dataPath(`${state.kind}/${day}/${day}_${hour}.json`));
     state.rows = data.leaderboard || [];
-    $("#generated").textContent = `생성 시각: ${data.generated_at || "-"}`;
+    $("#generated").textContent = `생성 시각: ${fmtTime(data.generated_at, true)}`;
     $("#empty").hidden = state.rows.length > 0;
     // 순위·팀명·점수만 먼저 보여준다. 상세는 클릭 시 조회.
     tbody.innerHTML = state.rows.map((r, i) => `
@@ -128,12 +185,12 @@ async function showTeam(teamId) {
       const isBest = best[p] !== undefined && r.obj === best[p];
       return `<td class="${isBest ? "best" : ""}">${fmtNum(r.obj)}</td>`;
     }).join("");
-    const when = (s.submitted_at || "").replace("T", " ").slice(0, 16);
+    const when = fmtTime(s.submitted_at);
     return `<tr><td class="when">${when}</td>${cells}</tr>`;
   }).join("");
 
   $("#d-body").innerHTML = `
-    <p class="muted">제출 ${subs.length}건 · 최신순 · 각 문제의 최고 기록은 굵게</p>
+    <p class="muted">제출 ${subs.length}건 · 최신순 · 시각은 ${state.tz} · 각 문제의 최고 기록은 굵게</p>
     <div class="wrap"><table class="hist">
       <thead><tr><th>제출 시각</th>${probs.map((p) => `<th>${p}</th>`).join("")}</tr></thead>
       <tbody>${rows}</tbody>
@@ -152,6 +209,13 @@ async function loadCompetition(name) {
 function bind() {
   $("#sel-comp").addEventListener("change", async (e) => {
     await loadCompetition(e.target.value);
+  });
+  $("#sel-tz").addEventListener("change", (e) => {
+    state.tz = e.target.value;
+    try { localStorage.setItem("ogc.tz", state.tz); } catch { /* 저장 실패는 무시 */ }
+    fillHours();            // 시각 라벨 다시 그리기
+    loadBoard();            // 생성 시각 문구 갱신
+    $("#overlay").hidden = true;   // 열려 있던 상세는 닫는다(시각 표기가 섞이지 않게)
   });
   $("#sel-kind").addEventListener("change", (e) => {
     state.kind = e.target.value; fillDates(); loadBoard();
@@ -182,6 +246,12 @@ function bind() {
     $("#empty").textContent = "데이터를 불러오지 못했습니다.";
     return;
   }
+  // 시간대 기본값: 이전 선택이 있으면 그것, 없으면 접속 지역으로 정한다.
+  let tz = null;
+  try { tz = localStorage.getItem("ogc.tz"); } catch { /* 읽기 실패는 무시 */ }
+  state.tz = (tz === "KST" || tz === "UTC") ? tz : defaultTz();
+  $("#sel-tz").value = state.tz;
+
   // competitions.json 은 최신 대회가 첫 항목이다 — 그것을 기본 선택한다.
   $("#sel-comp").innerHTML = state.comps
     .map((c) => `<option value="${c.name}">${c.label || c.name}</option>`).join("");
