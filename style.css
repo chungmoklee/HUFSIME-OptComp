@@ -29,7 +29,11 @@ td.rank, td.score { text-align:right; font-variant-numeric:tabular-nums; }
 footer { max-width:860px; margin:2rem auto 0; }
 
 #overlay { position:fixed; inset:0; background:rgba(0,0,0,.45);
-  display:flex; align-items:center; justify-content:center; padding:1rem; }
+  display:flex; align-items:center; justify-content:center; padding:1rem;
+  z-index:100; }
+/* display:flex 는 hidden 속성보다 우선한다. 명시적으로 눌러 주지 않으면
+   오버레이가 항상 표 사이에 끼어 보인다. */
+#overlay[hidden] { display:none; }
 #panel { background:var(--bg); color:var(--fg); border-radius:10px; padding:1.2rem;
   max-width:780px; width:100%; max-height:85vh; overflow:auto; position:relative; }
 #close { position:absolute; top:.8rem; right:.8rem; font:inherit; cursor:pointer;
