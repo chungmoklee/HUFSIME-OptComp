@@ -103,23 +103,41 @@ async function showTeam(teamId) {
     return;
   }
   const probs = problemNames(subs);
-  $("#d-body").innerHTML = subs.map((s) => {
+
+  // 제출 1건 = 표 1행. 건별로 카드를 쌓으면 P1..Pn 머리글이 매번 반복되어
+  // 이력이 수십 건일 때 화면이 수천 px 로 늘어난다. 한 표에 모으면 머리글이
+  // 한 줄이고 세로로도 짧아, 제출 간 값 비교도 바로 된다.
+  //
+  // 각 문제의 최소값(=가장 좋은 해)에 표시를 달아 어느 제출이 최선이었는지
+  // 한눈에 보이게 한다.
+  const best = {};
+  probs.forEach((p) => {
+    const vals = subs
+      .map((s) => ((s.eval_result || {}).test_results || {})[p])
+      .filter((r) => r && r.status === "ok" && typeof r.obj === "number")
+      .map((r) => r.obj);
+    if (vals.length) best[p] = Math.min(...vals);
+  });
+
+  const rows = subs.map((s) => {
     const tr = (s.eval_result && s.eval_result.test_results) || {};
     const cells = probs.map((p) => {
       const r = tr[p];
       if (!r) return "<td>—</td>";
-      const ok = r.status === "ok";
-      return `<td class="${ok ? "" : "na"}">${ok ? fmtNum(r.obj) : (r.status || "—")}</td>`;
+      if (r.status !== "ok") return `<td class="na">${r.status || "—"}</td>`;
+      const isBest = best[p] !== undefined && r.obj === best[p];
+      return `<td class="${isBest ? "best" : ""}">${fmtNum(r.obj)}</td>`;
     }).join("");
-    const when = (s.submitted_at || "").replace("T", " ").slice(0, 19);
-    return `<div class="sub">
-      <h3>${when} <span class="muted">· ${s.eval_status || "-"}</span></h3>
-      <div class="wrap"><table>
-        <thead><tr>${probs.map((p) => `<th>${p}</th>`).join("")}</tr></thead>
-        <tbody><tr>${cells}</tr></tbody>
-      </table></div>
-    </div>`;
+    const when = (s.submitted_at || "").replace("T", " ").slice(0, 16);
+    return `<tr><td class="when">${when}</td>${cells}</tr>`;
   }).join("");
+
+  $("#d-body").innerHTML = `
+    <p class="muted">제출 ${subs.length}건 · 최신순 · 각 문제의 최고 기록은 굵게</p>
+    <div class="wrap"><table class="hist">
+      <thead><tr><th>제출 시각</th>${probs.map((p) => `<th>${p}</th>`).join("")}</tr></thead>
+      <tbody>${rows}</tbody>
+    </table></div>`;
 }
 
 async function loadCompetition(name) {

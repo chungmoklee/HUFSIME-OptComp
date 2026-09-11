@@ -40,8 +40,12 @@ footer { max-width:860px; margin:2rem auto 0; }
   background:none; border:1px solid var(--line); border-radius:6px; padding:.25rem .6rem;
   color:var(--fg); }
 #panel h2 { margin:.2rem 0 .3rem; font-size:1.1rem; }
-.sub { margin:1rem 0; border:1px solid var(--line); border-radius:8px; padding:.7rem .9rem; }
-.sub h3 { margin:0 0 .5rem; font-size:.92rem; font-weight:600; }
-.sub table { margin:0; }
+/* 제출 이력 표 — 건수가 많아도 머리글은 한 줄이다. */
+.hist { font-variant-numeric:tabular-nums; }
+.hist th { position:sticky; top:0; background:var(--bg); z-index:1; }
+.hist td { white-space:nowrap; }
+.hist td:not(.when) { text-align:right; }
+.hist td.when { color:var(--muted); font-size:.85rem; }
+.hist td.best { font-weight:700; }
 .na { color:var(--bad); }
 .wrap { overflow-x:auto; }
