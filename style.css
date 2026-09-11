@@ -13,7 +13,7 @@ header { max-width:860px; margin:0 auto; padding:1.5rem 0 .5rem; }
 h1 { font-size:1.35rem; margin:0 0 .9rem; }
 .controls { display:flex; flex-wrap:wrap; gap:.75rem; align-items:center; }
 .controls label { font-size:.85rem; color:var(--muted); display:flex; gap:.35rem; align-items:center; }
-select, input[type="datetime-local"] {
+select, input[type="date"] {
   font:inherit; padding:.35rem .5rem; background:var(--bg); color:var(--fg);
   border:1px solid var(--line); border-radius:6px; }
 #btn-latest { font:inherit; padding:.35rem .7rem; cursor:pointer;

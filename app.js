@@ -73,8 +73,9 @@ function stampsFor(kind) {
 }
 
 // ── 시점 선택 ─────────────────────────────────────────────────────────────
-// 스냅샷은 UTC 매시 정각에만 존재한다. datetime-local 은 임의 시각을 고를 수
-// 있으므로, 고른 값에서 가장 가까운(그 이전의) 스냅샷으로 맞춰 준다.
+// 스냅샷은 UTC 매시 정각에만 존재한다. 달력에서 날짜를 고르면 그 날짜에
+// 실제로 데이터가 있는 시각만 드롭다운에 채우고, 시각을 고르면 바로 불러온다.
+// 날짜·시각은 화면에 보이는 시간대(KST/UTC) 기준으로 다룬다.
 
 // 스냅샷 "20260910/20260910_23" -> UTC epoch(ms)
 function stampToMs(stamp) {
@@ -82,57 +83,73 @@ function stampToMs(stamp) {
   return Date.parse(`${day.slice(0, 4)}-${day.slice(4, 6)}-${day.slice(6, 8)}T${hour}:00:00Z`);
 }
 
-// UTC epoch -> 선택 시간대의 "YYYY-MM-DDTHH:00" (datetime-local 의 value 형식)
-function msToLocalInput(ms) {
+// UTC epoch -> 선택 시간대의 날짜/시각 문자열
+function msToLocalParts(ms) {
   const s = new Date(ms + TZ_OFFSET[state.tz] * 3600e3);
-  return `${s.getUTCFullYear()}-${pad2(s.getUTCMonth() + 1)}-${pad2(s.getUTCDate())}` +
-         `T${pad2(s.getUTCHours())}:00`;
+  return {
+    date: `${s.getUTCFullYear()}-${pad2(s.getUTCMonth() + 1)}-${pad2(s.getUTCDate())}`,
+    hour: pad2(s.getUTCHours()),
+  };
 }
 
-// datetime-local 의 value(선택 시간대 기준) -> UTC epoch
-function localInputToMs(v) {
-  const ms = Date.parse(v + ":00Z");          // 일단 UTC 로 읽고
-  return isNaN(ms) ? NaN : ms - TZ_OFFSET[state.tz] * 3600e3;  // 시간대만큼 되돌린다
-}
-
-// 고른 시각 이하에서 가장 최근 스냅샷. 더 이른 것이 없으면 가장 오래된 것.
-function nearestStamp(targetMs) {
-  const list = stampsFor(state.kind).map((st) => ({ st, ms: stampToMs(st) }))
-    .filter((x) => !isNaN(x.ms)).sort((a, b) => a.ms - b.ms);
-  if (!list.length) return null;
-  let pick = list[0];
-  for (const x of list) if (x.ms <= targetMs) pick = x;
-  return pick;
+function allStampMs() {
+  return stampsFor(state.kind).map(stampToMs).filter((x) => !isNaN(x)).sort((a, b) => a - b);
 }
 
 function latestStamp() {
-  const list = stampsFor(state.kind).map(stampToMs).filter((x) => !isNaN(x));
-  return list.length ? Math.max(...list) : null;
+  const list = allStampMs();
+  return list.length ? list[list.length - 1] : null;
 }
 
-// 입력 위젯의 선택 가능 범위와 현재 값을 갱신한다.
+// 그 날짜(선택 시간대 기준)에 존재하는 시각 목록 — 오름차순
+function hoursForDate(dateStr) {
+  return allStampMs()
+    .map((ms) => ({ ms, p: msToLocalParts(ms) }))
+    .filter((x) => x.p.date === dateStr)
+    .map((x) => ({ hour: x.p.hour, ms: x.ms }));
+}
+
+// 날짜 입력과 시각 드롭다운을 현재 state.ms 에 맞춰 다시 그린다.
 function syncPicker() {
-  const list = stampsFor(state.kind).map(stampToMs).filter((x) => !isNaN(x));
-  const el = $("#sel-when");
-  if (!list.length) { el.value = ""; return; }
-  el.min = msToLocalInput(Math.min(...list));
-  el.max = msToLocalInput(Math.max(...list));
-  if (state.ms == null) state.ms = Math.max(...list);
-  el.value = msToLocalInput(state.ms);
+  const list = allStampMs();
+  const dateEl = $("#sel-date"), hourEl = $("#sel-hour");
+  if (!list.length) { dateEl.value = ""; hourEl.innerHTML = ""; return; }
+
+  if (state.ms == null) state.ms = list[list.length - 1];
+  const cur = msToLocalParts(state.ms);
+
+  // 데이터가 있는 범위 밖 날짜는 고를 수 없게 한다.
+  dateEl.min = msToLocalParts(list[0]).date;
+  dateEl.max = msToLocalParts(list[list.length - 1]).date;
+  dateEl.value = cur.date;
+  fillHours(cur.date, cur.hour);
+}
+
+// 날짜에 해당하는 시각만 채운다. 데이터가 없는 날이면 비워 둔다.
+function fillHours(dateStr, wantHour) {
+  const hourEl = $("#sel-hour");
+  const hrs = hoursForDate(dateStr);
+  hourEl.innerHTML = hrs.map((h) => `<option value="${h.ms}">${h.hour}:00</option>`).join("");
+  if (!hrs.length) { hourEl.value = ""; return; }
+  // 원하는 시각이 그 날에 없으면 가장 늦은 시각을 고른다.
+  const match = hrs.find((h) => h.hour === wantHour) || hrs[hrs.length - 1];
+  hourEl.value = String(match.ms);
+  state.ms = match.ms;
 }
 
 async function loadBoard() {
   const tbody = $("#tbl tbody");
-  const pick = state.ms == null ? null : nearestStamp(state.ms);
-  if (!pick) { tbody.innerHTML = ""; $("#empty").hidden = false; return; }
-  // 고른 시각에 스냅샷이 없으면 그 이전의 가장 가까운 것으로 맞춘다.
-  state.ms = pick.ms;
-  $("#sel-when").value = msToLocalInput(pick.ms);
-  const { day, hour } = parseStamp(pick.st);
+  // state.ms 는 항상 실제 스냅샷의 시각이다(드롭다운 값이 곧 스냅샷).
+  if (state.ms == null) { tbody.innerHTML = ""; $("#empty").hidden = false; return; }
+  const u = new Date(state.ms);   // 파일 경로는 UTC 기준이다
+  const day = `${u.getUTCFullYear()}${pad2(u.getUTCMonth() + 1)}${pad2(u.getUTCDate())}`;
+  const hour = pad2(u.getUTCHours());
   try {
     const data = await getJSON(dataPath(`${state.kind}/${day}/${day}_${hour}.json`));
     state.rows = data.leaderboard || [];
     $("#generated").textContent = `생성 시각: ${fmtTime(data.generated_at, true)}`;
+    // 앞서 "그 날짜에는 …" 같은 문구를 띄웠을 수 있으므로 되돌린다.
+    $("#empty").textContent = "해당 시각의 리더보드가 없습니다.";
     $("#empty").hidden = state.rows.length > 0;
     // 순위·팀명·점수만 먼저 보여준다. 상세는 클릭 시 조회.
     tbody.innerHTML = state.rows.map((r, i) => `
@@ -237,8 +254,23 @@ function bind() {
     loadBoard();            // 생성 시각 문구 갱신
     $("#overlay").hidden = true;   // 열려 있던 상세는 닫는다(시각 표기가 섞이지 않게)
   });
-  $("#sel-when").addEventListener("change", (e) => {
-    const ms = localInputToMs(e.target.value);
+  // 날짜를 고르면 그 날짜에 데이터가 있는 시각만 채우고, 곧바로 불러온다
+  // (날짜·시각이 모두 정해지므로 따로 누를 것이 없다).
+  $("#sel-date").addEventListener("change", (e) => {
+    const cur = state.ms == null ? null : msToLocalParts(state.ms);
+    fillHours(e.target.value, cur ? cur.hour : null);
+    if ($("#sel-hour").value) {
+      loadBoard();
+    } else {
+      // 그 날짜에 스냅샷이 없다 — 표를 비우고 안내한다.
+      $("#tbl tbody").innerHTML = "";
+      $("#generated").textContent = "";
+      $("#empty").hidden = false;
+      $("#empty").textContent = "그 날짜에는 리더보드가 없습니다.";
+    }
+  });
+  $("#sel-hour").addEventListener("change", (e) => {
+    const ms = Number(e.target.value);
     if (!isNaN(ms)) { state.ms = ms; loadBoard(); }
   });
   $("#btn-latest").addEventListener("click", () => {
