@@ -1,0 +1,14 @@
+{
+ "generated_at": "2026-09-12 07:00:00 UTC",
+ "team_id": "TEST_TIMEOUT",
+ "submissions": [
+  {
+   "submission_id": 101,
+   "submitted_at": "2026-09-12T15:34:56.538735",
+   "eval_status": "running",
+   "eval_started_at": "2026-09-12T06:35:02.263836",
+   "eval_finished_at": null,
+   "eval_result": null
+  }
+ ]
+}
