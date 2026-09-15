@@ -236,7 +236,10 @@ async function showTeam(teamId) {
 async function loadCompetition(name) {
   state.comp = name;
   const meta = state.comps.find((c) => c.name === name);
-  $("#title").textContent = (meta && meta.label) || name;
+  // 제목은 config 의 [publish] competition_label (registry 의 label) 을 쓴다.
+  const label = (meta && meta.label) || name;
+  $("#title").textContent = label;
+  document.title = `${label} 리더보드`;
   state.index = await getJSON(dataPath("index.json"));
   state.ms = latestStamp();     // 대회를 바꾸면 그 대회의 최신 시점으로
   syncPicker();
