@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-09-16 08:00:00 UTC",
+ "generated_at": "2026-09-17 01:00:00 UTC",
  "team_id": "T0036",
  "submissions": [
   {
@@ -61,6 +61,69 @@
       "status": "test_error(03)",
       "status_detail": "Some module in myalgorithm.py not found in ogc2026 virtualenv",
       "exception": ""
+     }
+    }
+   }
+  },
+  {
+   "submission_id": 20,
+   "submitted_at": "2026-09-17T00:05:00",
+   "eval_status": "done",
+   "eval_started_at": "2026-09-17T00:05:15.507095",
+   "eval_finished_at": "2026-09-17T00:05:33.782239",
+   "eval_result": {
+    "team_id": "T0036",
+    "team_name": "이정우(2024***48)",
+    "submission_time": "2026-09-17 00:05:00",
+    "eval_time": "2026-09-17 09:05:14",
+    "test_results": {
+     "P1": {
+      "prob_name": "P1",
+      "obj": -1,
+      "time": 0.32727599143981934,
+      "status": "algo_error",
+      "status_detail": "",
+      "exception": "0"
+     },
+     "P2": {
+      "prob_name": "P2",
+      "obj": -1,
+      "time": 1.472362756729126,
+      "status": "algo_error",
+      "status_detail": "",
+      "exception": "0"
+     },
+     "P3": {
+      "prob_name": "P3",
+      "obj": -1,
+      "time": 4.354198694229126,
+      "status": "algo_error",
+      "status_detail": "",
+      "exception": "0"
+     },
+     "P4": {
+      "prob_name": "P4",
+      "obj": -1,
+      "time": 0.6226506233215332,
+      "status": "algo_error",
+      "status_detail": "",
+      "exception": "0"
+     },
+     "P5": {
+      "prob_name": "P5",
+      "obj": -1,
+      "time": 2.516566753387451,
+      "status": "algo_error",
+      "status_detail": "",
+      "exception": "0"
+     },
+     "P6": {
+      "prob_name": "P6",
+      "obj": -1,
+      "time": 6.017728567123413,
+      "status": "algo_error",
+      "status_detail": "",
+      "exception": "0"
      }
     }
    }
