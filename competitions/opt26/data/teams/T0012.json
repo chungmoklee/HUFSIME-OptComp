@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-09-19 01:00:00 UTC",
+ "generated_at": "2026-09-19 02:00:00 UTC",
  "team_id": "T0012",
  "submissions": [
   {
@@ -131,10 +131,65 @@
   {
    "submission_id": 39,
    "submitted_at": "2026-09-19T00:45:40",
-   "eval_status": "running",
+   "eval_status": "done",
    "eval_started_at": "2026-09-19T00:45:51.853510",
-   "eval_finished_at": null,
-   "eval_result": null
+   "eval_finished_at": "2026-09-19T01:11:57.025321",
+   "eval_result": {
+    "team_id": "T0012",
+    "team_name": "이동윤(2022***02)",
+    "submission_time": "2026-09-19 00:45:40",
+    "eval_time": "2026-09-19 09:45:51",
+    "test_results": {
+     "P1": {
+      "prob_name": "P1",
+      "obj": 5602.82,
+      "time": 260.0424265861511,
+      "status": "ok",
+      "status_detail": "",
+      "exception": ""
+     },
+     "P2": {
+      "prob_name": "P2",
+      "obj": 8566.41,
+      "time": 260.5584797859192,
+      "status": "ok",
+      "status_detail": "",
+      "exception": ""
+     },
+     "P3": {
+      "prob_name": "P3",
+      "obj": 13544.75,
+      "time": 260.6168279647827,
+      "status": "ok",
+      "status_detail": "",
+      "exception": ""
+     },
+     "P4": {
+      "prob_name": "P4",
+      "obj": 6422.57,
+      "time": 260.2077329158783,
+      "status": "ok",
+      "status_detail": "",
+      "exception": ""
+     },
+     "P5": {
+      "prob_name": "P5",
+      "obj": 13238.94,
+      "time": 260.3115289211273,
+      "status": "ok",
+      "status_detail": "",
+      "exception": ""
+     },
+     "P6": {
+      "prob_name": "P6",
+      "obj": 24607.62,
+      "time": 260.8846161365509,
+      "status": "ok",
+      "status_detail": "",
+      "exception": ""
+     }
+    }
+   }
   }
  ]
 }
