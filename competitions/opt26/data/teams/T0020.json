@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-09-18 02:00:00 UTC",
+ "generated_at": "2026-09-20 07:00:00 UTC",
  "team_id": "T0020",
  "submissions": [
   {
@@ -190,6 +190,14 @@
      }
     }
    }
+  },
+  {
+   "submission_id": 48,
+   "submitted_at": "2026-09-20T06:54:57",
+   "eval_status": "running",
+   "eval_started_at": "2026-09-20T06:55:10.766031",
+   "eval_finished_at": null,
+   "eval_result": null
   }
  ]
 }
