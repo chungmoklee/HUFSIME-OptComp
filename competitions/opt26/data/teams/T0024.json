@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-09-21 14:00:00 UTC",
+ "generated_at": "2026-09-21 15:00:00 UTC",
  "team_id": "T0024",
  "submissions": [
   {
@@ -131,10 +131,65 @@
   {
    "submission_id": 58,
    "submitted_at": "2026-09-21T13:37:25",
-   "eval_status": "running",
+   "eval_status": "done",
    "eval_started_at": "2026-09-21T13:37:52.682618",
-   "eval_finished_at": null,
-   "eval_result": null
+   "eval_finished_at": "2026-09-21T14:04:54.218307",
+   "eval_result": {
+    "team_id": "T0024",
+    "team_name": "신민서(2023***77)",
+    "submission_time": "2026-09-21 13:37:25",
+    "eval_time": "2026-09-21 22:37:52",
+    "test_results": {
+     "P1": {
+      "prob_name": "P1",
+      "obj": 5570.93,
+      "time": 269.83584690093994,
+      "status": "ok",
+      "status_detail": "",
+      "exception": ""
+     },
+     "P2": {
+      "prob_name": "P2",
+      "obj": 8568.24,
+      "time": 269.932101726532,
+      "status": "ok",
+      "status_detail": "",
+      "exception": ""
+     },
+     "P3": {
+      "prob_name": "P3",
+      "obj": 13756.38,
+      "time": 269.8147232532501,
+      "status": "ok",
+      "status_detail": "",
+      "exception": ""
+     },
+     "P4": {
+      "prob_name": "P4",
+      "obj": 6466.45,
+      "time": 269.81296277046204,
+      "status": "ok",
+      "status_detail": "",
+      "exception": ""
+     },
+     "P5": {
+      "prob_name": "P5",
+      "obj": 13343.08,
+      "time": 269.886385679245,
+      "status": "ok",
+      "status_detail": "",
+      "exception": ""
+     },
+     "P6": {
+      "prob_name": "P6",
+      "obj": 24734.2,
+      "time": 270.00106739997864,
+      "status": "ok",
+      "status_detail": "",
+      "exception": ""
+     }
+    }
+   }
   }
  ]
 }
