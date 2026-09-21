@@ -1,0 +1,69 @@
+{
+ "generated_at": "2026-09-21 04:00:00 UTC",
+ "team_id": "T0018",
+ "submissions": [
+  {
+   "submission_id": 54,
+   "submitted_at": "2026-09-21T03:52:52",
+   "eval_status": "done",
+   "eval_started_at": "2026-09-21T03:53:04.951403",
+   "eval_finished_at": "2026-09-21T03:53:44.934741",
+   "eval_result": {
+    "team_id": "T0018",
+    "team_name": "정승민(2022***75)",
+    "submission_time": "2026-09-21 03:52:52",
+    "eval_time": "2026-09-21 12:53:04",
+    "test_results": {
+     "P1": {
+      "prob_name": "P1",
+      "obj": 6961.66,
+      "time": 0.08204150199890137,
+      "status": "ok",
+      "status_detail": "",
+      "exception": ""
+     },
+     "P2": {
+      "prob_name": "P2",
+      "obj": 13002.22,
+      "time": 0.41618847846984863,
+      "status": "ok",
+      "status_detail": "",
+      "exception": ""
+     },
+     "P3": {
+      "prob_name": "P3",
+      "obj": 19576.09,
+      "time": 4.828923463821411,
+      "status": "ok",
+      "status_detail": "",
+      "exception": ""
+     },
+     "P4": {
+      "prob_name": "P4",
+      "obj": 8118.58,
+      "time": 0.10842609405517578,
+      "status": "ok",
+      "status_detail": "",
+      "exception": ""
+     },
+     "P5": {
+      "prob_name": "P5",
+      "obj": 20342.91,
+      "time": 3.2112271785736084,
+      "status": "ok",
+      "status_detail": "",
+      "exception": ""
+     },
+     "P6": {
+      "prob_name": "P6",
+      "obj": 34856.0,
+      "time": 29.146472215652466,
+      "status": "ok",
+      "status_detail": "",
+      "exception": ""
+     }
+    }
+   }
+  }
+ ]
+}
