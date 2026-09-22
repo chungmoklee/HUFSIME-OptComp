@@ -54,3 +54,62 @@ footer { max-width:860px; margin:2rem auto 0; }
 .hist td.best { font-weight:700; }
 .na { color:var(--bad); }
 .wrap { overflow-x:auto; }
+
+/* ── 탭 ──────────────────────────────────────────────────────────────── */
+#tabs { display:flex; gap:.25rem; margin:1rem 0 .25rem; border-bottom:1px solid var(--line); }
+.tab { font:inherit; font-size:.9rem; cursor:pointer; padding:.45rem .9rem;
+  background:none; border:none; border-bottom:2px solid transparent;
+  color:var(--muted); margin-bottom:-1px; }
+.tab:hover { color:var(--fg); }
+.tab.on { color:var(--accent); border-bottom-color:var(--accent); font-weight:600; }
+
+/* ── 순위 변화 그래프 ────────────────────────────────────────────────── */
+#trend .controls { margin:.9rem 0 .5rem; }
+#trend .controls button { font:inherit; font-size:.85rem; padding:.3rem .65rem;
+  cursor:pointer; background:var(--bg); color:var(--fg);
+  border:1px solid var(--line); border-radius:6px; }
+#trend .controls button:hover { border-color:var(--accent); color:var(--accent); }
+
+#chart { position:relative; margin-top:.5rem; }
+#chart svg { width:100%; height:auto; display:block; touch-action:pan-y; }
+
+.grid { stroke:var(--line); stroke-width:1; }
+.axis { stroke:var(--line); stroke-width:1; }
+.cursor { stroke:var(--muted); stroke-width:1; stroke-dasharray:3 3; }
+#cursor[hidden] { display:none; }
+.ytick { fill:var(--muted); font-size:11px; text-anchor:end; }
+.xtick { fill:var(--muted); font-size:11px; text-anchor:middle; }
+
+.line { fill:none; stroke-width:2; stroke-linejoin:round; stroke-linecap:round; }
+/* 선택이 있으면 나머지는 흐리게 — 강조된 팀만 눈에 들어오게 한다. */
+.series { cursor:pointer; }
+.series.off { opacity:.14; }
+.series.on .line { stroke-width:2.5; }
+.series.off .line { stroke-width:1.5; }
+.series:hover .line { stroke-width:3.5; }
+
+/* 툴팁 — SVG 밖 div 라 글꼴·줄바꿈이 본문과 같다. */
+#tip { position:absolute; top:0; pointer-events:none;
+  background:var(--bg); color:var(--fg); border:1px solid var(--line);
+  border-radius:8px; padding:.5rem .65rem; font-size:.82rem;
+  box-shadow:0 4px 14px rgba(0,0,0,.16); max-width:18rem; z-index:5; }
+#tip[hidden] { display:none; }
+.tt-h { color:var(--muted); font-size:.78rem; margin-bottom:.3rem; }
+.tt-r { display:flex; align-items:center; gap:.35rem; white-space:nowrap; line-height:1.5; }
+.tt-r b { margin-left:auto; padding-left:.6rem; font-variant-numeric:tabular-nums; }
+
+/* 범례 겸 팀 선택기 */
+#legend { display:flex; flex-wrap:wrap; gap:.35rem; margin-top:.9rem; }
+.lg { display:flex; align-items:center; gap:.35rem; font:inherit; font-size:.82rem;
+  cursor:pointer; padding:.25rem .55rem; border:1px solid var(--line);
+  border-radius:999px; background:var(--bg); color:var(--fg); }
+.lg:hover { border-color:var(--accent); }
+.lg.off { opacity:.45; }
+.lg.sel { border-color:var(--accent); background:color-mix(in srgb, var(--accent) 12%, var(--bg)); }
+.lg .lv { color:var(--muted); font-variant-numeric:tabular-nums; }
+.sw { width:10px; height:10px; border-radius:2px; flex:none; display:inline-block; }
+
+@media (max-width:640px) {
+  #trend .controls { gap:.4rem; }
+  .lg { font-size:.78rem; }
+}

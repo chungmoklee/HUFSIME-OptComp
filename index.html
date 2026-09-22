@@ -25,6 +25,36 @@
 </header>
 
 <main>
+  <nav id="tabs">
+    <button class="tab on" data-view="board" type="button">리더보드</button>
+    <button class="tab" data-view="trend" type="button">순위 변화</button>
+  </nav>
+
+  <section id="trend" hidden>
+    <div class="controls">
+      <label>보기
+        <select id="sel-metric">
+          <option value="rank">순위</option>
+          <option value="score">점수</option>
+        </select>
+      </label>
+      <label>기간
+        <select id="sel-span">
+          <option value="24">최근 24시간</option>
+          <option value="72">최근 3일</option>
+          <option value="168">최근 7일</option>
+          <option value="0" selected>전체</option>
+        </select>
+      </label>
+      <button id="btn-top10" type="button">상위 10팀만</button>
+      <button id="btn-all" type="button">전체 선택</button>
+      <button id="btn-none" type="button">선택 해제</button>
+    </div>
+    <div id="chart"></div>
+    <p id="trend-empty" class="muted" hidden>순위 이력이 없습니다.</p>
+    <div id="legend"></div>
+  </section>
+
   <section id="board">
     <table id="tbl">
       <thead><tr><th class="rank">순위</th><th>팀</th><th class="score">점수</th></tr></thead>
@@ -45,6 +75,7 @@
 
 <footer class="muted">
   스냅샷은 매시 정각에 갱신됩니다. 팀명을 누르면 제출 이력을 볼 수 있습니다.
+  순위 변화 탭에서 팀을 눌러 강조할 수 있습니다.
 </footer>
 <script src="app.js"></script>
 </body>
