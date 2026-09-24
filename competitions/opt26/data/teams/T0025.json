@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-09-24 08:00:00 UTC",
+ "generated_at": "2026-09-24 09:00:00 UTC",
  "team_id": "T0025",
  "submissions": [
   {
@@ -509,10 +509,65 @@
   {
    "submission_id": 87,
    "submitted_at": "2026-09-24T07:53:06",
-   "eval_status": "running",
+   "eval_status": "done",
    "eval_started_at": "2026-09-24T07:53:36.197218",
-   "eval_finished_at": null,
-   "eval_result": null
+   "eval_finished_at": "2026-09-24T08:22:03.382053",
+   "eval_result": {
+    "team_id": "T0025",
+    "team_name": "최서윤(2023***56)",
+    "submission_time": "2026-09-24 07:53:06",
+    "eval_time": "2026-09-24 16:53:35",
+    "test_results": {
+     "P1": {
+      "prob_name": "P1",
+      "obj": 5523.82,
+      "time": 284.0010359287262,
+      "status": "ok",
+      "status_detail": "",
+      "exception": ""
+     },
+     "P2": {
+      "prob_name": "P2",
+      "obj": 8732.07,
+      "time": 284.0015563964844,
+      "status": "ok",
+      "status_detail": "",
+      "exception": ""
+     },
+     "P3": {
+      "prob_name": "P3",
+      "obj": 13640.28,
+      "time": 284.0072033405304,
+      "status": "ok",
+      "status_detail": "",
+      "exception": ""
+     },
+     "P4": {
+      "prob_name": "P4",
+      "obj": 6299.55,
+      "time": 284.0011360645294,
+      "status": "ok",
+      "status_detail": "",
+      "exception": ""
+     },
+     "P5": {
+      "prob_name": "P5",
+      "obj": 13366.44,
+      "time": 284.0044915676117,
+      "status": "ok",
+      "status_detail": "",
+      "exception": ""
+     },
+     "P6": {
+      "prob_name": "P6",
+      "obj": 25429.58,
+      "time": 284.00737619400024,
+      "status": "ok",
+      "status_detail": "",
+      "exception": ""
+     }
+    }
+   }
   }
  ]
 }
