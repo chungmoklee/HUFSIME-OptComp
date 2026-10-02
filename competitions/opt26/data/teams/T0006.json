@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-10-01 07:00:00 UTC",
+ "generated_at": "2026-10-02 01:00:00 UTC",
  "team_id": "T0006",
  "submissions": [
   {
@@ -184,6 +184,69 @@
       "prob_name": "P6",
       "obj": 29588.78,
       "time": 4.781884431838989,
+      "status": "ok",
+      "status_detail": "",
+      "exception": ""
+     }
+    }
+   }
+  },
+  {
+   "submission_id": 136,
+   "submitted_at": "2026-10-02T00:23:09",
+   "eval_status": "done",
+   "eval_started_at": "2026-10-02T00:24:39.638442",
+   "eval_finished_at": "2026-10-02T00:24:51.165197",
+   "eval_result": {
+    "team_id": "T0006",
+    "team_name": "이영훈(2021***57)",
+    "submission_time": "2026-10-02 00:23:09",
+    "eval_time": "2026-10-02 09:24:39",
+    "test_results": {
+     "P1": {
+      "prob_name": "P1",
+      "obj": 6667.71,
+      "time": 0.04880023002624512,
+      "status": "ok",
+      "status_detail": "",
+      "exception": ""
+     },
+     "P2": {
+      "prob_name": "P2",
+      "obj": 9770.99,
+      "time": 0.912635087966919,
+      "status": "ok",
+      "status_detail": "",
+      "exception": ""
+     },
+     "P3": {
+      "prob_name": "P3",
+      "obj": -1,
+      "time": 2.8123672008514404,
+      "status": "algo_error",
+      "status_detail": "",
+      "exception": "Duplicate customer: 기간=2, 고객=197 중복 방문"
+     },
+     "P4": {
+      "prob_name": "P4",
+      "obj": -1,
+      "time": 0.0928504467010498,
+      "status": "algo_error",
+      "status_detail": "",
+      "exception": "Duplicate customer: 기간=2, 고객=81 중복 방문"
+     },
+     "P5": {
+      "prob_name": "P5",
+      "obj": 16196.2,
+      "time": 0.812049150466919,
+      "status": "ok",
+      "status_detail": "",
+      "exception": ""
+     },
+     "P6": {
+      "prob_name": "P6",
+      "obj": 29588.78,
+      "time": 4.770288467407227,
       "status": "ok",
       "status_detail": "",
       "exception": ""
