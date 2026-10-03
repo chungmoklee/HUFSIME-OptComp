@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-10-02 13:00:00 UTC",
+ "generated_at": "2026-10-03 04:00:00 UTC",
  "team_id": "T0006",
  "submissions": [
   {
@@ -310,6 +310,69 @@
       "prob_name": "P6",
       "obj": 29588.78,
       "time": 5.222391366958618,
+      "status": "ok",
+      "status_detail": "",
+      "exception": ""
+     }
+    }
+   }
+  },
+  {
+   "submission_id": 145,
+   "submitted_at": "2026-10-03T03:35:46",
+   "eval_status": "done",
+   "eval_started_at": "2026-10-03T03:35:53.870410",
+   "eval_finished_at": "2026-10-03T03:36:03.748481",
+   "eval_result": {
+    "team_id": "T0006",
+    "team_name": "이영훈(2021***57)",
+    "submission_time": "2026-10-03 03:35:46",
+    "eval_time": "2026-10-03 12:35:53",
+    "test_results": {
+     "P1": {
+      "prob_name": "P1",
+      "obj": 6667.71,
+      "time": 0.05044245719909668,
+      "status": "ok",
+      "status_detail": "",
+      "exception": ""
+     },
+     "P2": {
+      "prob_name": "P2",
+      "obj": 9770.99,
+      "time": 0.9375064373016357,
+      "status": "ok",
+      "status_detail": "",
+      "exception": ""
+     },
+     "P3": {
+      "prob_name": "P3",
+      "obj": 254666.65,
+      "time": 0.8336663246154785,
+      "status": "ok",
+      "status_detail": "",
+      "exception": ""
+     },
+     "P4": {
+      "prob_name": "P4",
+      "obj": 12843.57,
+      "time": 0.07593035697937012,
+      "status": "ok",
+      "status_detail": "",
+      "exception": ""
+     },
+     "P5": {
+      "prob_name": "P5",
+      "obj": 16196.2,
+      "time": 0.8057074546813965,
+      "status": "ok",
+      "status_detail": "",
+      "exception": ""
+     },
+     "P6": {
+      "prob_name": "P6",
+      "obj": 29588.78,
+      "time": 4.874925374984741,
       "status": "ok",
       "status_detail": "",
       "exception": ""
