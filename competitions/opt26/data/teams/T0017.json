@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-10-04 23:00:00 UTC",
+ "generated_at": "2026-10-05 00:00:00 UTC",
  "team_id": "T0017",
  "submissions": [
   {
@@ -635,10 +635,65 @@
   {
    "submission_id": 158,
    "submitted_at": "2026-10-04T22:40:00",
-   "eval_status": "running",
+   "eval_status": "done",
    "eval_started_at": "2026-10-04T22:40:35.581751",
-   "eval_finished_at": null,
-   "eval_result": null
+   "eval_finished_at": "2026-10-04T23:09:00.102561",
+   "eval_result": {
+    "team_id": "T0017",
+    "team_name": "정도현(2022***24)",
+    "submission_time": "2026-10-04 22:40:00",
+    "eval_time": "2026-10-05 07:40:35",
+    "test_results": {
+     "P1": {
+      "prob_name": "P1",
+      "obj": 5498.23,
+      "time": 283.28994250297546,
+      "status": "ok",
+      "status_detail": "",
+      "exception": ""
+     },
+     "P2": {
+      "prob_name": "P2",
+      "obj": 8438.63,
+      "time": 283.4560890197754,
+      "status": "ok",
+      "status_detail": "",
+      "exception": ""
+     },
+     "P3": {
+      "prob_name": "P3",
+      "obj": 13131.94,
+      "time": 283.70369696617126,
+      "status": "ok",
+      "status_detail": "",
+      "exception": ""
+     },
+     "P4": {
+      "prob_name": "P4",
+      "obj": 6342.64,
+      "time": 283.3378150463104,
+      "status": "ok",
+      "status_detail": "",
+      "exception": ""
+     },
+     "P5": {
+      "prob_name": "P5",
+      "obj": 13110.28,
+      "time": 283.5889263153076,
+      "status": "ok",
+      "status_detail": "",
+      "exception": ""
+     },
+     "P6": {
+      "prob_name": "P6",
+      "obj": 24093.4,
+      "time": 283.7860519886017,
+      "status": "ok",
+      "status_detail": "",
+      "exception": ""
+     }
+    }
+   }
   }
  ]
 }
