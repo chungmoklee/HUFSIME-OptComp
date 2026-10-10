@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-10-10 13:00:00 UTC",
+ "generated_at": "2026-10-10 14:00:00 UTC",
  "team_id": "T0020",
  "submissions": [
   {
@@ -572,10 +572,65 @@
   {
    "submission_id": 223,
    "submitted_at": "2026-10-10T12:47:06",
-   "eval_status": "running",
+   "eval_status": "done",
    "eval_started_at": "2026-10-10T12:47:17.066140",
-   "eval_finished_at": null,
-   "eval_result": null
+   "eval_finished_at": "2026-10-10T13:15:13.998955",
+   "eval_result": {
+    "team_id": "T0020",
+    "team_name": "차현우(2022***60)",
+    "submission_time": "2026-10-10 12:47:06",
+    "eval_time": "2026-10-10 21:47:16",
+    "test_results": {
+     "P1": {
+      "prob_name": "P1",
+      "obj": 5553.64,
+      "time": 279.0038070678711,
+      "status": "ok",
+      "status_detail": "",
+      "exception": ""
+     },
+     "P2": {
+      "prob_name": "P2",
+      "obj": 8856.77,
+      "time": 279.0094199180603,
+      "status": "ok",
+      "status_detail": "",
+      "exception": ""
+     },
+     "P3": {
+      "prob_name": "P3",
+      "obj": 13708.41,
+      "time": 279.0267815589905,
+      "status": "ok",
+      "status_detail": "",
+      "exception": ""
+     },
+     "P4": {
+      "prob_name": "P4",
+      "obj": 6443.56,
+      "time": 279.0051610469818,
+      "status": "ok",
+      "status_detail": "",
+      "exception": ""
+     },
+     "P5": {
+      "prob_name": "P5",
+      "obj": 13375.86,
+      "time": 279.01266980171204,
+      "status": "ok",
+      "status_detail": "",
+      "exception": ""
+     },
+     "P6": {
+      "prob_name": "P6",
+      "obj": 25356.13,
+      "time": 279.0298411846161,
+      "status": "ok",
+      "status_detail": "",
+      "exception": ""
+     }
+    }
+   }
   }
  ]
 }
