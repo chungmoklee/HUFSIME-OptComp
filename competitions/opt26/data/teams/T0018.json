@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-10-11 13:00:00 UTC",
+ "generated_at": "2026-10-11 14:00:00 UTC",
  "team_id": "T0018",
  "submissions": [
   {
@@ -446,10 +446,65 @@
   {
    "submission_id": 244,
    "submitted_at": "2026-10-11T12:59:13",
-   "eval_status": "running",
+   "eval_status": "done",
    "eval_started_at": "2026-10-11T12:59:28.096600",
-   "eval_finished_at": null,
-   "eval_result": null
+   "eval_finished_at": "2026-10-11T13:28:36.463166",
+   "eval_result": {
+    "team_id": "T0018",
+    "team_name": "정승민(2022***75)",
+    "submission_time": "2026-10-11 12:59:13",
+    "eval_time": "2026-10-11 21:59:27",
+    "test_results": {
+     "P1": {
+      "prob_name": "P1",
+      "obj": 5513.07,
+      "time": 290.96439933776855,
+      "status": "ok",
+      "status_detail": "",
+      "exception": ""
+     },
+     "P2": {
+      "prob_name": "P2",
+      "obj": 8406.04,
+      "time": 290.9735436439514,
+      "status": "ok",
+      "status_detail": "",
+      "exception": ""
+     },
+     "P3": {
+      "prob_name": "P3",
+      "obj": 12977.79,
+      "time": 290.9586215019226,
+      "status": "ok",
+      "status_detail": "",
+      "exception": ""
+     },
+     "P4": {
+      "prob_name": "P4",
+      "obj": 6260.65,
+      "time": 290.9658639431,
+      "status": "ok",
+      "status_detail": "",
+      "exception": ""
+     },
+     "P5": {
+      "prob_name": "P5",
+      "obj": 13163.47,
+      "time": 290.9765348434448,
+      "status": "ok",
+      "status_detail": "",
+      "exception": ""
+     },
+     "P6": {
+      "prob_name": "P6",
+      "obj": 24124.28,
+      "time": 290.95527267456055,
+      "status": "ok",
+      "status_detail": "",
+      "exception": ""
+     }
+    }
+   }
   }
  ]
 }
