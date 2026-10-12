@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-10-12 18:00:00 UTC",
+ "generated_at": "2026-10-12 19:00:00 UTC",
  "team_id": "T0033",
  "submissions": [
   {
@@ -131,10 +131,65 @@
   {
    "submission_id": 269,
    "submitted_at": "2026-10-12T17:31:53",
-   "eval_status": "running",
+   "eval_status": "done",
    "eval_started_at": "2026-10-12T17:32:17.578046",
-   "eval_finished_at": null,
-   "eval_result": null
+   "eval_finished_at": "2026-10-12T18:01:00.060857",
+   "eval_result": {
+    "team_id": "T0033",
+    "team_name": "조소연(2024***44)",
+    "submission_time": "2026-10-12 17:31:53",
+    "eval_time": "2026-10-13 02:32:17",
+    "test_results": {
+     "P1": {
+      "prob_name": "P1",
+      "obj": 6304.86,
+      "time": 285.8774333000183,
+      "status": "ok",
+      "status_detail": "",
+      "exception": ""
+     },
+     "P2": {
+      "prob_name": "P2",
+      "obj": 10592.9,
+      "time": 286.39408469200134,
+      "status": "ok",
+      "status_detail": "",
+      "exception": ""
+     },
+     "P3": {
+      "prob_name": "P3",
+      "obj": 15697.5,
+      "time": 286.79369497299194,
+      "status": "ok",
+      "status_detail": "",
+      "exception": ""
+     },
+     "P4": {
+      "prob_name": "P4",
+      "obj": 7434.16,
+      "time": 286.1908028125763,
+      "status": "ok",
+      "status_detail": "",
+      "exception": ""
+     },
+     "P5": {
+      "prob_name": "P5",
+      "obj": 14793.67,
+      "time": 286.57457876205444,
+      "status": "ok",
+      "status_detail": "",
+      "exception": ""
+     },
+     "P6": {
+      "prob_name": "P6",
+      "obj": 28155.67,
+      "time": 286.732225894928,
+      "status": "ok",
+      "status_detail": "",
+      "exception": ""
+     }
+    }
+   }
   }
  ]
 }
