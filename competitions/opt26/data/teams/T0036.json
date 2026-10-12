@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-10-11 09:00:00 UTC",
+ "generated_at": "2026-10-12 03:00:00 UTC",
  "team_id": "T0036",
  "submissions": [
   {
@@ -1255,6 +1255,69 @@
       "prob_name": "P6",
       "obj": 24364.43,
       "time": 288.81739473342896,
+      "status": "ok",
+      "status_detail": "",
+      "exception": ""
+     }
+    }
+   }
+  },
+  {
+   "submission_id": 252,
+   "submitted_at": "2026-10-12T02:16:39",
+   "eval_status": "done",
+   "eval_started_at": "2026-10-12T02:16:55.561979",
+   "eval_finished_at": "2026-10-12T02:45:23.356116",
+   "eval_result": {
+    "team_id": "T0036",
+    "team_name": "이정우(2024***48)",
+    "submission_time": "2026-10-12 02:16:39",
+    "eval_time": "2026-10-12 11:16:55",
+    "test_results": {
+     "P1": {
+      "prob_name": "P1",
+      "obj": 5498.23,
+      "time": 280.94125628471375,
+      "status": "ok",
+      "status_detail": "",
+      "exception": ""
+     },
+     "P2": {
+      "prob_name": "P2",
+      "obj": 8531.63,
+      "time": 282.3637709617615,
+      "status": "ok",
+      "status_detail": "",
+      "exception": ""
+     },
+     "P3": {
+      "prob_name": "P3",
+      "obj": 13042.92,
+      "time": 287.1335623264313,
+      "status": "ok",
+      "status_detail": "",
+      "exception": ""
+     },
+     "P4": {
+      "prob_name": "P4",
+      "obj": 6285.98,
+      "time": 281.25503849983215,
+      "status": "ok",
+      "status_detail": "",
+      "exception": ""
+     },
+     "P5": {
+      "prob_name": "P5",
+      "obj": 13081.19,
+      "time": 283.6120524406433,
+      "status": "ok",
+      "status_detail": "",
+      "exception": ""
+     },
+     "P6": {
+      "prob_name": "P6",
+      "obj": 24258.99,
+      "time": 290.1941578388214,
       "status": "ok",
       "status_detail": "",
       "exception": ""
