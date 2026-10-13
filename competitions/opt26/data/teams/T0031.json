@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-10-13 17:00:00 UTC",
+ "generated_at": "2026-10-13 18:00:00 UTC",
  "team_id": "T0031",
  "submissions": [
   {
@@ -68,10 +68,65 @@
   {
    "submission_id": 294,
    "submitted_at": "2026-10-13T16:58:32",
-   "eval_status": "running",
+   "eval_status": "done",
    "eval_started_at": "2026-10-13T16:58:40.829693",
-   "eval_finished_at": null,
-   "eval_result": null
+   "eval_finished_at": "2026-10-13T17:27:54.913863",
+   "eval_result": {
+    "team_id": "T0031",
+    "team_name": "이의진(2023***48)",
+    "submission_time": "2026-10-13 16:58:32",
+    "eval_time": "2026-10-14 01:58:40",
+    "test_results": {
+     "P1": {
+      "prob_name": "P1",
+      "obj": 5517.71,
+      "time": 292.0001220703125,
+      "status": "ok",
+      "status_detail": "",
+      "exception": ""
+     },
+     "P2": {
+      "prob_name": "P2",
+      "obj": 8905.03,
+      "time": 292.00010085105896,
+      "status": "ok",
+      "status_detail": "",
+      "exception": ""
+     },
+     "P3": {
+      "prob_name": "P3",
+      "obj": 13549.71,
+      "time": 292.00028920173645,
+      "status": "ok",
+      "status_detail": "",
+      "exception": ""
+     },
+     "P4": {
+      "prob_name": "P4",
+      "obj": 6379.84,
+      "time": 292.0001029968262,
+      "status": "ok",
+      "status_detail": "",
+      "exception": ""
+     },
+     "P5": {
+      "prob_name": "P5",
+      "obj": 13176.49,
+      "time": 292.00026869773865,
+      "status": "ok",
+      "status_detail": "",
+      "exception": ""
+     },
+     "P6": {
+      "prob_name": "P6",
+      "obj": 25219.97,
+      "time": 292.0004062652588,
+      "status": "ok",
+      "status_detail": "",
+      "exception": ""
+     }
+    }
+   }
   }
  ]
 }
