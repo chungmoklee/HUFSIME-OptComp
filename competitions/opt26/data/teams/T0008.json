@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-10-13 14:00:00 UTC",
+ "generated_at": "2026-10-13 15:00:00 UTC",
  "team_id": "T0008",
  "submissions": [
   {
@@ -572,10 +572,65 @@
   {
    "submission_id": 291,
    "submitted_at": "2026-10-13T13:57:37",
-   "eval_status": "running",
+   "eval_status": "done",
    "eval_started_at": "2026-10-13T13:57:50.813839",
-   "eval_finished_at": null,
-   "eval_result": null
+   "eval_finished_at": "2026-10-13T14:27:09.690823",
+   "eval_result": {
+    "team_id": "T0008",
+    "team_name": "박규도(2022***10)",
+    "submission_time": "2026-10-13 13:57:37",
+    "eval_time": "2026-10-13 22:57:50",
+    "test_results": {
+     "P1": {
+      "prob_name": "P1",
+      "obj": 5498.23,
+      "time": 292.5214834213257,
+      "status": "ok",
+      "status_detail": "",
+      "exception": ""
+     },
+     "P2": {
+      "prob_name": "P2",
+      "obj": 8498.18,
+      "time": 292.5818326473236,
+      "status": "ok",
+      "status_detail": "",
+      "exception": ""
+     },
+     "P3": {
+      "prob_name": "P3",
+      "obj": 13012.46,
+      "time": 293.0631260871887,
+      "status": "ok",
+      "status_detail": "",
+      "exception": ""
+     },
+     "P4": {
+      "prob_name": "P4",
+      "obj": 6260.65,
+      "time": 292.53745889663696,
+      "status": "ok",
+      "status_detail": "",
+      "exception": ""
+     },
+     "P5": {
+      "prob_name": "P5",
+      "obj": 13072.79,
+      "time": 292.5340507030487,
+      "status": "ok",
+      "status_detail": "",
+      "exception": ""
+     },
+     "P6": {
+      "prob_name": "P6",
+      "obj": 24185.28,
+      "time": 292.9745583534241,
+      "status": "ok",
+      "status_detail": "",
+      "exception": ""
+     }
+    }
+   }
   }
  ]
 }
