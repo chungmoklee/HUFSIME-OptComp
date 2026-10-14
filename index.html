@@ -1,82 +1,133 @@
 <!doctype html>
 <html lang="ko">
+
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<title>리더보드</title>
-<link rel="stylesheet" href="style.css">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>리더보드</title>
+  <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-<header>
-  <h1 id="title"></h1>
-  <div class="controls">
-    <label>대회 <select id="sel-comp"></select></label>
-    <label>날짜 <input type="date" id="sel-date"></label>
-    <label>시각 <select id="sel-hour"></select></label>
-    <button id="btn-latest" type="button">최신</button>
-    <label>시간대
-      <select id="sel-tz">
-        <option value="KST">KST (UTC+9)</option>
-        <option value="UTC">UTC</option>
-      </select>
-    </label>
-  </div>
-  <p id="generated" class="muted"></p>
-</header>
-
-<main>
-  <nav id="tabs">
-    <button class="tab on" data-view="board" type="button">리더보드</button>
-    <button class="tab" data-view="trend" type="button">순위 변화</button>
-  </nav>
-
-  <section id="trend" hidden>
+  <header>
+    <h1 id="title"></h1>
     <div class="controls">
-      <label>보기
-        <select id="sel-metric">
-          <option value="rank">순위</option>
-          <option value="score">점수</option>
+      <label>대회 <select id="sel-comp"></select></label>
+      <label>날짜 <input type="date" id="sel-date"></label>
+      <label>시각 <select id="sel-hour"></select></label>
+      <button id="btn-latest" type="button">최신</button>
+      <label>시간대
+        <select id="sel-tz">
+          <option value="KST">KST (UTC+9)</option>
+          <option value="UTC">UTC</option>
         </select>
       </label>
-      <label>기간
-        <select id="sel-span">
-          <option value="24">최근 24시간</option>
-          <option value="72">최근 3일</option>
-          <option value="168">최근 7일</option>
-          <option value="0" selected>전체</option>
-        </select>
-      </label>
-      <button id="btn-top10" type="button">상위 10팀만</button>
-      <button id="btn-all" type="button">전체 선택</button>
-      <button id="btn-none" type="button">선택 해제</button>
     </div>
-    <div id="chart"></div>
-    <p id="trend-empty" class="muted" hidden>순위 이력이 없습니다.</p>
-    <div id="legend"></div>
-  </section>
+    <p id="generated" class="muted"></p>
+  </header>
 
-  <section id="board">
-    <table id="tbl">
-      <thead><tr><th class="rank">순위</th><th>팀</th><th class="score">점수</th></tr></thead>
-      <tbody></tbody>
-    </table>
-    <p id="empty" class="muted" hidden>해당 시각의 리더보드가 없습니다.</p>
-  </section>
-</main>
+  <main>
+    <nav id="tabs">
+      <button class="tab on" data-view="board" type="button">리더보드</button>
+      <button class="tab" data-view="trend" type="button">순위 변화</button>
+      <button class="tab" data-view="dash" type="button">Dashboard</button>
+    </nav>
 
-<div id="overlay" hidden>
-  <div id="panel">
-    <button id="close">닫기</button>
-    <h2 id="d-team"></h2>
-    <p id="d-sum" class="muted"></p>
-    <div id="d-body"></div>
+    <section id="dash" hidden>
+      <p id="dash-gen" class="muted"></p>
+      <div id="d-tiles" class="tiles"></div>
+
+      <div class="card">
+        <div class="card-h">
+          <h3>문제별 목적함수 분포</h3>
+          <label>문제 <select id="sel-prob"></select></label>
+        </div>
+        <p id="hist-sum" class="muted"></p>
+        <div id="hist"></div>
+        <p id="hist-empty" class="muted" hidden>feasible 한 제출이 없어 분포를 그릴 수 없습니다.</p>
+      </div>
+
+      <div class="card">
+        <div class="card-h">
+          <h3>일별 제출 추이</h3>
+        </div>
+        <div id="bydate"></div>
+        <p class="muted">날짜는 채점 서버의 로컬 시각 기준입니다.</p>
+      </div>
+
+      <div class="card">
+        <div class="card-h">
+          <h3>시간대별 제출 분포</h3>
+        </div>
+        <div id="byhour"></div>
+        <p id="byhour-note" class="muted"></p>
+      </div>
+
+      <div class="card">
+        <div class="card-h">
+          <h3>팀별 제출 횟수</h3>
+          <button id="btn-team-more" type="button">전체 보기</button>
+        </div>
+        <div id="teamcnt"></div>
+      </div>
+
+      <p id="dash-empty" class="muted" hidden>대시보드 데이터가 없습니다.</p>
+    </section>
+
+    <section id="trend" hidden>
+      <div class="controls">
+        <label>보기
+          <select id="sel-metric">
+            <option value="rank">순위</option>
+            <option value="score">점수</option>
+          </select>
+        </label>
+        <label>기간
+          <select id="sel-span">
+            <option value="24">최근 24시간</option>
+            <option value="72">최근 3일</option>
+            <option value="168">최근 7일</option>
+            <option value="0" selected>전체</option>
+          </select>
+        </label>
+        <button id="btn-top10" type="button">상위 10팀만</button>
+        <button id="btn-all" type="button">전체 선택</button>
+        <button id="btn-none" type="button">선택 해제</button>
+      </div>
+      <div id="chart"></div>
+      <p id="trend-empty" class="muted" hidden>순위 이력이 없습니다.</p>
+      <div id="legend"></div>
+    </section>
+
+    <section id="board">
+      <table id="tbl">
+        <thead>
+          <tr>
+            <th class="rank">순위</th>
+            <th>팀</th>
+            <th class="score">점수</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+      <p id="empty" class="muted" hidden>해당 시각의 리더보드가 없습니다.</p>
+    </section>
+  </main>
+
+  <div id="overlay" hidden>
+    <div id="panel">
+      <button id="close">닫기</button>
+      <h2 id="d-team"></h2>
+      <p id="d-sum" class="muted"></p>
+      <div id="d-body"></div>
+    </div>
   </div>
-</div>
 
-<footer class="muted">
-  스냅샷은 매시 정각에 갱신됩니다. 팀명을 누르면 제출 이력을 볼 수 있습니다.
-  순위 변화 탭에서 팀을 눌러 강조할 수 있습니다.
-</footer>
-<script src="app.js"></script>
+  <footer class="muted">
+    스냅샷은 매시 정각에 갱신됩니다. 팀명을 누르면 제출 이력을 볼 수 있습니다.
+    순위 변화 탭에서 팀을 눌러 강조할 수 있습니다.
+  </footer>
+  <script src="app.js"></script>
 </body>
+
 </html>
