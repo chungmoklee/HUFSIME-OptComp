@@ -1,0 +1,43 @@
+{
+ "generated_at": "2026-11-13 10:00:00 UTC",
+ "leaderboard": [
+  {
+   "team_id": "T2000",
+   "team_name": "test",
+   "nb_P2": 1,
+   "P2_score": -1,
+   "P2_obj": null,
+   "nb_P7": 1,
+   "P7_score": -1,
+   "P7_obj": null,
+   "nb_P1": 1,
+   "P1_score": -1,
+   "P1_obj": null,
+   "nb_P3": 1,
+   "P3_score": -1,
+   "P3_obj": null,
+   "nb_P8": 1,
+   "P8_score": -1,
+   "P8_obj": null,
+   "nb_P5": 1,
+   "P5_score": -1,
+   "P5_obj": null,
+   "nb_P9": 1,
+   "P9_score": -1,
+   "P9_obj": null,
+   "nb_P4": 1,
+   "P4_score": -1,
+   "P4_obj": null,
+   "nb_P10": 1,
+   "P10_score": -1,
+   "P10_obj": null,
+   "nb_P6": 1,
+   "P6_score": -1,
+   "P6_obj": null,
+   "total_score": -10,
+   "ranking": 1,
+   "nationality": null,
+   "affiliation": null
+  }
+ ]
+}

@@ -1,9 +1,11 @@
 {
- "generated_at": "2026-11-13 09:00:00 UTC",
+ "generated_at": "2026-11-13 10:00:00 UTC",
  "summary": {
-  "total_teams": 0,
-  "total_submissions": 0,
-  "submission_by_date": {},
+  "total_teams": 1,
+  "total_submissions": 4,
+  "submission_by_date": {
+   "2026-11-13": 4
+  },
   "submission_by_hour": {
    "0": 0,
    "1": 0,
@@ -14,7 +16,7 @@
    "6": 0,
    "7": 0,
    "8": 0,
-   "9": 0,
+   "9": 4,
    "10": 0,
    "11": 0,
    "12": 0,
@@ -30,9 +32,168 @@
    "22": 0,
    "23": 0
   },
-  "status_counts": {}
+  "status_counts": {
+   "P1": {
+    "algo_error": 1
+   },
+   "P10": {
+    "algo_error": 1
+   },
+   "P2": {
+    "algo_error": 1
+   },
+   "P3": {
+    "algo_error": 1
+   },
+   "P4": {
+    "algo_error": 1
+   },
+   "P5": {
+    "algo_error": 1
+   },
+   "P6": {
+    "algo_error": 1
+   },
+   "P7": {
+    "algo_error": 1
+   },
+   "P8": {
+    "algo_error": 1
+   },
+   "P9": {
+    "algo_error": 1
+   }
+  }
  },
- "problems": [],
- "stamp": "20261113/20261113_09",
- "teams_by_submissions": []
+ "problems": [
+  {
+   "name": "P1",
+   "feasible_count": 0,
+   "obj_stats": {
+    "count": 0
+   },
+   "obj_histogram": {
+    "bin_edges": [],
+    "counts": [],
+    "bin_width": 0.0
+   }
+  },
+  {
+   "name": "P10",
+   "feasible_count": 0,
+   "obj_stats": {
+    "count": 0
+   },
+   "obj_histogram": {
+    "bin_edges": [],
+    "counts": [],
+    "bin_width": 0.0
+   }
+  },
+  {
+   "name": "P2",
+   "feasible_count": 0,
+   "obj_stats": {
+    "count": 0
+   },
+   "obj_histogram": {
+    "bin_edges": [],
+    "counts": [],
+    "bin_width": 0.0
+   }
+  },
+  {
+   "name": "P3",
+   "feasible_count": 0,
+   "obj_stats": {
+    "count": 0
+   },
+   "obj_histogram": {
+    "bin_edges": [],
+    "counts": [],
+    "bin_width": 0.0
+   }
+  },
+  {
+   "name": "P4",
+   "feasible_count": 0,
+   "obj_stats": {
+    "count": 0
+   },
+   "obj_histogram": {
+    "bin_edges": [],
+    "counts": [],
+    "bin_width": 0.0
+   }
+  },
+  {
+   "name": "P5",
+   "feasible_count": 0,
+   "obj_stats": {
+    "count": 0
+   },
+   "obj_histogram": {
+    "bin_edges": [],
+    "counts": [],
+    "bin_width": 0.0
+   }
+  },
+  {
+   "name": "P6",
+   "feasible_count": 0,
+   "obj_stats": {
+    "count": 0
+   },
+   "obj_histogram": {
+    "bin_edges": [],
+    "counts": [],
+    "bin_width": 0.0
+   }
+  },
+  {
+   "name": "P7",
+   "feasible_count": 0,
+   "obj_stats": {
+    "count": 0
+   },
+   "obj_histogram": {
+    "bin_edges": [],
+    "counts": [],
+    "bin_width": 0.0
+   }
+  },
+  {
+   "name": "P8",
+   "feasible_count": 0,
+   "obj_stats": {
+    "count": 0
+   },
+   "obj_histogram": {
+    "bin_edges": [],
+    "counts": [],
+    "bin_width": 0.0
+   }
+  },
+  {
+   "name": "P9",
+   "feasible_count": 0,
+   "obj_stats": {
+    "count": 0
+   },
+   "obj_histogram": {
+    "bin_edges": [],
+    "counts": [],
+    "bin_width": 0.0
+   }
+  }
+ ],
+ "stamp": "20261113/20261113_10",
+ "teams_by_submissions": [
+  {
+   "team_id": "T2000",
+   "team_name": "test",
+   "count": 5,
+   "last_at": "2026-11-13T09:56:12"
+  }
+ ]
 }
