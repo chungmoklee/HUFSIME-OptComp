@@ -1,0 +1,762 @@
+{
+ "generated_at": "2026-11-09 05:00:00 UTC",
+ "team_id": "T0030",
+ "submissions": [
+  {
+   "submission_id": 61,
+   "submitted_at": "2026-09-22T00:14:22",
+   "eval_status": "done",
+   "eval_started_at": "2026-09-22T00:14:49.456131",
+   "eval_finished_at": "2026-09-22T00:16:08.892832",
+   "eval_result": {
+    "team_id": "T0030",
+    "team_name": "박정환(2023***38)",
+    "submission_time": "2026-09-22 00:14:22",
+    "eval_time": "2026-09-22 09:14:48",
+    "test_results": {
+     "P1": {
+      "prob_name": "P1",
+      "obj": 6693.56,
+      "time": 1.017531394958496,
+      "status": "ok",
+      "status_detail": "",
+      "exception": ""
+     },
+     "P2": {
+      "prob_name": "P2",
+      "obj": 12177.77,
+      "time": 8.412328958511353,
+      "status": "ok",
+      "status_detail": "",
+      "exception": ""
+     },
+     "P3": {
+      "prob_name": "P3",
+      "obj": 18855.34,
+      "time": 25.4250750541687,
+      "status": "ok",
+      "status_detail": "",
+      "exception": ""
+     },
+     "P4": {
+      "prob_name": "P4",
+      "obj": 7375.73,
+      "time": 3.3312740325927734,
+      "status": "ok",
+      "status_detail": "",
+      "exception": ""
+     },
+     "P5": {
+      "prob_name": "P5",
+      "obj": 19292.08,
+      "time": 10.985220670700073,
+      "status": "ok",
+      "status_detail": "",
+      "exception": ""
+     },
+     "P6": {
+      "prob_name": "P6",
+      "obj": 32564.82,
+      "time": 28.05365014076233,
+      "status": "ok",
+      "status_detail": "",
+      "exception": ""
+     }
+    }
+   }
+  },
+  {
+   "submission_id": 68,
+   "submitted_at": "2026-09-22T14:13:51",
+   "eval_status": "done",
+   "eval_started_at": "2026-09-22T14:14:18.332736",
+   "eval_finished_at": "2026-09-22T14:28:39.239854",
+   "eval_result": {
+    "team_id": "T0030",
+    "team_name": "박정환(2023***38)",
+    "submission_time": "2026-09-22 14:13:51",
+    "eval_time": "2026-09-22 23:14:17",
+    "test_results": {
+     "P1": {
+      "prob_name": "P1",
+      "obj": 5652.5,
+      "time": 60.040952920913696,
+      "status": "ok",
+      "status_detail": "",
+      "exception": ""
+     },
+     "P2": {
+      "prob_name": "P2",
+      "obj": 10016.46,
+      "time": 122.70051717758179,
+      "status": "ok",
+      "status_detail": "",
+      "exception": ""
+     },
+     "P3": {
+      "prob_name": "P3",
+      "obj": 15469.12,
+      "time": 276.0381851196289,
+      "status": "ok",
+      "status_detail": "",
+      "exception": ""
+     },
+     "P4": {
+      "prob_name": "P4",
+      "obj": 6548.57,
+      "time": 60.05566096305847,
+      "status": "ok",
+      "status_detail": "",
+      "exception": ""
+     },
+     "P5": {
+      "prob_name": "P5",
+      "obj": 15634.05,
+      "time": 63.87286567687988,
+      "status": "ok",
+      "status_detail": "",
+      "exception": ""
+     },
+     "P6": {
+      "prob_name": "P6",
+      "obj": 27792.07,
+      "time": 276.0447151660919,
+      "status": "ok",
+      "status_detail": "",
+      "exception": ""
+     }
+    }
+   }
+  },
+  {
+   "submission_id": 74,
+   "submitted_at": "2026-09-23T02:23:33",
+   "eval_status": "done",
+   "eval_started_at": "2026-09-23T02:24:02.470169",
+   "eval_finished_at": "2026-09-23T02:37:28.075165",
+   "eval_result": {
+    "team_id": "T0030",
+    "team_name": "박정환(2023***38)",
+    "submission_time": "2026-09-23 02:23:33",
+    "eval_time": "2026-09-23 11:24:01",
+    "test_results": {
+     "P1": {
+      "prob_name": "P1",
+      "obj": 5671.32,
+      "time": 60.012054443359375,
+      "status": "ok",
+      "status_detail": "",
+      "exception": ""
+     },
+     "P2": {
+      "prob_name": "P2",
+      "obj": 9774.59,
+      "time": 69.01643133163452,
+      "status": "ok",
+      "status_detail": "",
+      "exception": ""
+     },
+     "P3": {
+      "prob_name": "P3",
+      "obj": 15012.93,
+      "time": 197.06052613258362,
+      "status": "ok",
+      "status_detail": "",
+      "exception": ""
+     },
+     "P4": {
+      "prob_name": "P4",
+      "obj": 6452.17,
+      "time": 60.93236041069031,
+      "status": "ok",
+      "status_detail": "",
+      "exception": ""
+     },
+     "P5": {
+      "prob_name": "P5",
+      "obj": 14864.99,
+      "time": 148.12288236618042,
+      "status": "ok",
+      "status_detail": "",
+      "exception": ""
+     },
+     "P6": {
+      "prob_name": "P6",
+      "obj": 27015.73,
+      "time": 267.04131603240967,
+      "status": "ok",
+      "status_detail": "",
+      "exception": ""
+     }
+    }
+   }
+  },
+  {
+   "submission_id": 81,
+   "submitted_at": "2026-09-23T14:28:34",
+   "eval_status": "done",
+   "eval_started_at": "2026-09-23T14:29:03.185168",
+   "eval_finished_at": "2026-09-23T14:55:48.216128",
+   "eval_result": {
+    "team_id": "T0030",
+    "team_name": "박정환(2023***38)",
+    "submission_time": "2026-09-23 14:28:34",
+    "eval_time": "2026-09-23 23:29:02",
+    "test_results": {
+     "P1": {
+      "prob_name": "P1",
+      "obj": 5681.21,
+      "time": 267.0031006336212,
+      "status": "ok",
+      "status_detail": "",
+      "exception": ""
+     },
+     "P2": {
+      "prob_name": "P2",
+      "obj": 10239.29,
+      "time": 267.0109386444092,
+      "status": "ok",
+      "status_detail": "",
+      "exception": ""
+     },
+     "P3": {
+      "prob_name": "P3",
+      "obj": 15192.29,
+      "time": 267.03601002693176,
+      "status": "ok",
+      "status_detail": "",
+      "exception": ""
+     },
+     "P4": {
+      "prob_name": "P4",
+      "obj": 6578.49,
+      "time": 267.00526881217957,
+      "status": "ok",
+      "status_detail": "",
+      "exception": ""
+     },
+     "P5": {
+      "prob_name": "P5",
+      "obj": 14395.18,
+      "time": 267.0159628391266,
+      "status": "ok",
+      "status_detail": "",
+      "exception": ""
+     },
+     "P6": {
+      "prob_name": "P6",
+      "obj": 27751.65,
+      "time": 267.0420298576355,
+      "status": "ok",
+      "status_detail": "",
+      "exception": ""
+     }
+    }
+   }
+  },
+  {
+   "submission_id": 83,
+   "submitted_at": "2026-09-24T02:29:03",
+   "eval_status": "done",
+   "eval_started_at": "2026-09-24T02:29:30.700833",
+   "eval_finished_at": "2026-09-24T02:56:15.216188",
+   "eval_result": {
+    "team_id": "T0030",
+    "team_name": "박정환(2023***38)",
+    "submission_time": "2026-09-24 02:29:03",
+    "eval_time": "2026-09-24 11:29:30",
+    "test_results": {
+     "P1": {
+      "prob_name": "P1",
+      "obj": 5544.25,
+      "time": 267.0046389102936,
+      "status": "ok",
+      "status_detail": "",
+      "exception": ""
+     },
+     "P2": {
+      "prob_name": "P2",
+      "obj": 10129.98,
+      "time": 267.013906955719,
+      "status": "ok",
+      "status_detail": "",
+      "exception": ""
+     },
+     "P3": {
+      "prob_name": "P3",
+      "obj": 15702.74,
+      "time": 267.0447223186493,
+      "status": "ok",
+      "status_detail": "",
+      "exception": ""
+     },
+     "P4": {
+      "prob_name": "P4",
+      "obj": 6594.6,
+      "time": 267.0064959526062,
+      "status": "ok",
+      "status_detail": "",
+      "exception": ""
+     },
+     "P5": {
+      "prob_name": "P5",
+      "obj": 14967.8,
+      "time": 267.0194492340088,
+      "status": "ok",
+      "status_detail": "",
+      "exception": ""
+     },
+     "P6": {
+      "prob_name": "P6",
+      "obj": 28693.34,
+      "time": 267.05262541770935,
+      "status": "ok",
+      "status_detail": "",
+      "exception": ""
+     }
+    }
+   }
+  },
+  {
+   "submission_id": 92,
+   "submitted_at": "2026-09-25T06:58:11",
+   "eval_status": "done",
+   "eval_started_at": "2026-09-25T06:58:34.351064",
+   "eval_finished_at": "2026-09-25T07:25:20.032856",
+   "eval_result": {
+    "team_id": "T0030",
+    "team_name": "박정환(2023***38)",
+    "submission_time": "2026-09-25 06:58:11",
+    "eval_time": "2026-09-25 15:58:33",
+    "test_results": {
+     "P1": {
+      "prob_name": "P1",
+      "obj": 5660.57,
+      "time": 267.0029320716858,
+      "status": "ok",
+      "status_detail": "",
+      "exception": ""
+     },
+     "P2": {
+      "prob_name": "P2",
+      "obj": 9130.45,
+      "time": 267.00726413726807,
+      "status": "ok",
+      "status_detail": "",
+      "exception": ""
+     },
+     "P3": {
+      "prob_name": "P3",
+      "obj": 14178.06,
+      "time": 267.0354769229889,
+      "status": "ok",
+      "status_detail": "",
+      "exception": ""
+     },
+     "P4": {
+      "prob_name": "P4",
+      "obj": 6505.94,
+      "time": 266.9925239086151,
+      "status": "ok",
+      "status_detail": "",
+      "exception": ""
+     },
+     "P5": {
+      "prob_name": "P5",
+      "obj": 13320.98,
+      "time": 267.015677690506,
+      "status": "ok",
+      "status_detail": "",
+      "exception": ""
+     },
+     "P6": {
+      "prob_name": "P6",
+      "obj": 25750.47,
+      "time": 267.0431053638458,
+      "status": "ok",
+      "status_detail": "",
+      "exception": ""
+     }
+    }
+   }
+  },
+  {
+   "submission_id": 132,
+   "submitted_at": "2026-10-01T12:11:22",
+   "eval_status": "done",
+   "eval_started_at": "2026-10-01T12:11:44.794515",
+   "eval_finished_at": "2026-10-01T12:38:31.101432",
+   "eval_result": {
+    "team_id": "T0030",
+    "team_name": "박정환(2023***38)",
+    "submission_time": "2026-10-01 12:11:22",
+    "eval_time": "2026-10-01 21:11:44",
+    "test_results": {
+     "P1": {
+      "prob_name": "P1",
+      "obj": 5645.39,
+      "time": 267.00619888305664,
+      "status": "ok",
+      "status_detail": "",
+      "exception": ""
+     },
+     "P2": {
+      "prob_name": "P2",
+      "obj": 9130.45,
+      "time": 267.0186216831207,
+      "status": "ok",
+      "status_detail": "",
+      "exception": ""
+     },
+     "P3": {
+      "prob_name": "P3",
+      "obj": 14173.61,
+      "time": 267.0604944229126,
+      "status": "ok",
+      "status_detail": "",
+      "exception": ""
+     },
+     "P4": {
+      "prob_name": "P4",
+      "obj": 6472.92,
+      "time": 267.00818848609924,
+      "status": "ok",
+      "status_detail": "",
+      "exception": ""
+     },
+     "P5": {
+      "prob_name": "P5",
+      "obj": 13320.98,
+      "time": 267.02820086479187,
+      "status": "ok",
+      "status_detail": "",
+      "exception": ""
+     },
+     "P6": {
+      "prob_name": "P6",
+      "obj": 25750.47,
+      "time": 267.07007598876953,
+      "status": "ok",
+      "status_detail": "",
+      "exception": ""
+     }
+    }
+   }
+  },
+  {
+   "submission_id": 142,
+   "submitted_at": "2026-10-02T15:22:44",
+   "eval_status": "done",
+   "eval_started_at": "2026-10-02T15:23:48.585782",
+   "eval_finished_at": "2026-10-02T15:50:37.940681",
+   "eval_result": {
+    "team_id": "T0030",
+    "team_name": "박정환(2023***38)",
+    "submission_time": "2026-10-02 15:22:44",
+    "eval_time": "2026-10-03 00:23:48",
+    "test_results": {
+     "P1": {
+      "prob_name": "P1",
+      "obj": 5738.47,
+      "time": 267.0684847831726,
+      "status": "ok",
+      "status_detail": "",
+      "exception": ""
+     },
+     "P2": {
+      "prob_name": "P2",
+      "obj": 9109.84,
+      "time": 267.29812502861023,
+      "status": "ok",
+      "status_detail": "",
+      "exception": ""
+     },
+     "P3": {
+      "prob_name": "P3",
+      "obj": 14103.38,
+      "time": 267.848384141922,
+      "status": "ok",
+      "status_detail": "",
+      "exception": ""
+     },
+     "P4": {
+      "prob_name": "P4",
+      "obj": 6448.45,
+      "time": 267.10357689857483,
+      "status": "ok",
+      "status_detail": "",
+      "exception": ""
+     },
+     "P5": {
+      "prob_name": "P5",
+      "obj": 13259.86,
+      "time": 267.53047132492065,
+      "status": "ok",
+      "status_detail": "",
+      "exception": ""
+     },
+     "P6": {
+      "prob_name": "P6",
+      "obj": 25475.7,
+      "time": 268.3932948112488,
+      "status": "ok",
+      "status_detail": "",
+      "exception": ""
+     }
+    }
+   }
+  },
+  {
+   "submission_id": 233,
+   "submitted_at": "2026-10-11T07:24:49",
+   "eval_status": "done",
+   "eval_started_at": "2026-10-11T07:25:14.217713",
+   "eval_finished_at": "2026-10-11T07:52:00.011772",
+   "eval_result": {
+    "team_id": "T0030",
+    "team_name": "박정환(2023***38)",
+    "submission_time": "2026-10-11 07:24:49",
+    "eval_time": "2026-10-11 16:25:13",
+    "test_results": {
+     "P1": {
+      "prob_name": "P1",
+      "obj": 5679.08,
+      "time": 266.64111042022705,
+      "status": "ok",
+      "status_detail": "",
+      "exception": ""
+     },
+     "P2": {
+      "prob_name": "P2",
+      "obj": 8763.92,
+      "time": 266.9245982170105,
+      "status": "ok",
+      "status_detail": "",
+      "exception": ""
+     },
+     "P3": {
+      "prob_name": "P3",
+      "obj": 13806.66,
+      "time": 267.57210636138916,
+      "status": "ok",
+      "status_detail": "",
+      "exception": ""
+     },
+     "P4": {
+      "prob_name": "P4",
+      "obj": 6578.12,
+      "time": 266.72182416915894,
+      "status": "ok",
+      "status_detail": "",
+      "exception": ""
+     },
+     "P5": {
+      "prob_name": "P5",
+      "obj": 13190.81,
+      "time": 267.14883828163147,
+      "status": "ok",
+      "status_detail": "",
+      "exception": ""
+     },
+     "P6": {
+      "prob_name": "P6",
+      "obj": 25515.38,
+      "time": 268.30766129493713,
+      "status": "ok",
+      "status_detail": "",
+      "exception": ""
+     }
+    }
+   }
+  },
+  {
+   "submission_id": 290,
+   "submitted_at": "2026-10-13T12:46:06",
+   "eval_status": "done",
+   "eval_started_at": "2026-10-13T12:46:30.699315",
+   "eval_finished_at": "2026-10-13T13:13:19.429546",
+   "eval_result": {
+    "team_id": "T0030",
+    "team_name": "박정환(2023***38)",
+    "submission_time": "2026-10-13 12:46:06",
+    "eval_time": "2026-10-13 21:46:30",
+    "test_results": {
+     "P1": {
+      "prob_name": "P1",
+      "obj": 5523.94,
+      "time": 267.12141466140747,
+      "status": "ok",
+      "status_detail": "",
+      "exception": ""
+     },
+     "P2": {
+      "prob_name": "P2",
+      "obj": 8720.8,
+      "time": 267.40185356140137,
+      "status": "ok",
+      "status_detail": "",
+      "exception": ""
+     },
+     "P3": {
+      "prob_name": "P3",
+      "obj": 13837.7,
+      "time": 268.1287188529968,
+      "status": "ok",
+      "status_detail": "",
+      "exception": ""
+     },
+     "P4": {
+      "prob_name": "P4",
+      "obj": 6597.76,
+      "time": 267.1564862728119,
+      "status": "ok",
+      "status_detail": "",
+      "exception": ""
+     },
+     "P5": {
+      "prob_name": "P5",
+      "obj": 13166.29,
+      "time": 267.66076827049255,
+      "status": "ok",
+      "status_detail": "",
+      "exception": ""
+     },
+     "P6": {
+      "prob_name": "P6",
+      "obj": 25276.79,
+      "time": 268.798002243042,
+      "status": "ok",
+      "status_detail": "",
+      "exception": ""
+     }
+    }
+   }
+  },
+  {
+   "submission_id": 302,
+   "submitted_at": "2026-10-14T01:07:32",
+   "eval_status": "done",
+   "eval_started_at": "2026-10-14T01:07:59.319189",
+   "eval_finished_at": "2026-10-14T01:35:33.803428",
+   "eval_result": {
+    "team_id": "T0030",
+    "team_name": "박정환(2023***38)",
+    "submission_time": "2026-10-14 01:07:32",
+    "eval_time": "2026-10-14 10:07:58",
+    "test_results": {
+     "P1": {
+      "prob_name": "P1",
+      "obj": 5523.94,
+      "time": 267.1112549304962,
+      "status": "ok",
+      "status_detail": "",
+      "exception": ""
+     },
+     "P2": {
+      "prob_name": "P2",
+      "obj": 8720.8,
+      "time": 267.41748428344727,
+      "status": "ok",
+      "status_detail": "",
+      "exception": ""
+     },
+     "P3": {
+      "prob_name": "P3",
+      "obj": 13319.03,
+      "time": 291.1430366039276,
+      "status": "ok",
+      "status_detail": "",
+      "exception": ""
+     },
+     "P4": {
+      "prob_name": "P4",
+      "obj": 6498.45,
+      "time": 267.1829526424408,
+      "status": "ok",
+      "status_detail": "",
+      "exception": ""
+     },
+     "P5": {
+      "prob_name": "P5",
+      "obj": 13166.29,
+      "time": 267.65757608413696,
+      "status": "ok",
+      "status_detail": "",
+      "exception": ""
+     },
+     "P6": {
+      "prob_name": "P6",
+      "obj": 24237.11,
+      "time": 291.1392867565155,
+      "status": "ok",
+      "status_detail": "",
+      "exception": ""
+     }
+    }
+   }
+  },
+  {
+   "submission_id": 311,
+   "submitted_at": "2026-10-14T13:09:49",
+   "eval_status": "done",
+   "eval_started_at": "2026-10-14T13:10:24.502984",
+   "eval_finished_at": "2026-10-14T13:39:33.377298",
+   "eval_result": {
+    "team_id": "T0030",
+    "team_name": "박정환(2023***38)",
+    "submission_time": "2026-10-14 13:09:49",
+    "eval_time": "2026-10-14 22:10:23",
+    "test_results": {
+     "P1": {
+      "prob_name": "P1",
+      "obj": 5498.23,
+      "time": 291.0026385784149,
+      "status": "ok",
+      "status_detail": "",
+      "exception": ""
+     },
+     "P2": {
+      "prob_name": "P2",
+      "obj": 8426.93,
+      "time": 291.00909948349,
+      "status": "ok",
+      "status_detail": "",
+      "exception": ""
+     },
+     "P3": {
+      "prob_name": "P3",
+      "obj": 13233.36,
+      "time": 291.02691102027893,
+      "status": "ok",
+      "status_detail": "",
+      "exception": ""
+     },
+     "P4": {
+      "prob_name": "P4",
+      "obj": 6343.74,
+      "time": 291.0039875507355,
+      "status": "ok",
+      "status_detail": "",
+      "exception": ""
+     },
+     "P5": {
+      "prob_name": "P5",
+      "obj": 13098.94,
+      "time": 291.0126132965088,
+      "status": "ok",
+      "status_detail": "",
+      "exception": ""
+     },
+     "P6": {
+      "prob_name": "P6",
+      "obj": 24276.54,
+      "time": 291.03167366981506,
+      "status": "ok",
+      "status_detail": "",
+      "exception": ""
+     }
+    }
+   }
+  }
+ ]
+}

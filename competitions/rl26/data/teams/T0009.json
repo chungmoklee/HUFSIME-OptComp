@@ -1,0 +1,636 @@
+{
+ "generated_at": "2026-11-09 05:00:00 UTC",
+ "team_id": "T0009",
+ "submissions": [
+  {
+   "submission_id": 29,
+   "submitted_at": "2026-09-17T13:12:46",
+   "eval_status": "done",
+   "eval_started_at": "2026-09-17T13:13:08.421886",
+   "eval_finished_at": "2026-09-17T13:40:17.326922",
+   "eval_result": {
+    "team_id": "T0009",
+    "team_name": "박진우(2022***67)",
+    "submission_time": "2026-09-17 13:12:46",
+    "eval_time": "2026-09-17 22:13:07",
+    "test_results": {
+     "P1": {
+      "prob_name": "P1",
+      "obj": 5517.71,
+      "time": 271.08420634269714,
+      "status": "ok",
+      "status_detail": "",
+      "exception": ""
+     },
+     "P2": {
+      "prob_name": "P2",
+      "obj": 8526.38,
+      "time": 271.0830590724945,
+      "status": "ok",
+      "status_detail": "",
+      "exception": ""
+     },
+     "P3": {
+      "prob_name": "P3",
+      "obj": 13036.78,
+      "time": 271.08662486076355,
+      "status": "ok",
+      "status_detail": "",
+      "exception": ""
+     },
+     "P4": {
+      "prob_name": "P4",
+      "obj": 6350.71,
+      "time": 271.08218574523926,
+      "status": "ok",
+      "status_detail": "",
+      "exception": ""
+     },
+     "P5": {
+      "prob_name": "P5",
+      "obj": 13075.11,
+      "time": 271.08373951911926,
+      "status": "ok",
+      "status_detail": "",
+      "exception": ""
+     },
+     "P6": {
+      "prob_name": "P6",
+      "obj": 24203.34,
+      "time": 271.086923122406,
+      "status": "ok",
+      "status_detail": "",
+      "exception": ""
+     }
+    }
+   }
+  },
+  {
+   "submission_id": 35,
+   "submitted_at": "2026-09-18T04:53:19",
+   "eval_status": "done",
+   "eval_started_at": "2026-09-18T04:53:32.247053",
+   "eval_finished_at": "2026-09-18T05:20:41.393595",
+   "eval_result": {
+    "team_id": "T0009",
+    "team_name": "박진우(2022***67)",
+    "submission_time": "2026-09-18 04:53:19",
+    "eval_time": "2026-09-18 13:53:31",
+    "test_results": {
+     "P1": {
+      "prob_name": "P1",
+      "obj": 5498.23,
+      "time": 271.0834617614746,
+      "status": "ok",
+      "status_detail": "",
+      "exception": ""
+     },
+     "P2": {
+      "prob_name": "P2",
+      "obj": 8450.87,
+      "time": 271.0839445590973,
+      "status": "ok",
+      "status_detail": "",
+      "exception": ""
+     },
+     "P3": {
+      "prob_name": "P3",
+      "obj": 13145.14,
+      "time": 271.0854480266571,
+      "status": "ok",
+      "status_detail": "",
+      "exception": ""
+     },
+     "P4": {
+      "prob_name": "P4",
+      "obj": 6334.51,
+      "time": 271.08307456970215,
+      "status": "ok",
+      "status_detail": "",
+      "exception": ""
+     },
+     "P5": {
+      "prob_name": "P5",
+      "obj": 13219.03,
+      "time": 271.0835602283478,
+      "status": "ok",
+      "status_detail": "",
+      "exception": ""
+     },
+     "P6": {
+      "prob_name": "P6",
+      "obj": 24093.05,
+      "time": 271.0887086391449,
+      "status": "ok",
+      "status_detail": "",
+      "exception": ""
+     }
+    }
+   }
+  },
+  {
+   "submission_id": 40,
+   "submitted_at": "2026-09-19T02:59:57",
+   "eval_status": "done",
+   "eval_started_at": "2026-09-19T03:00:08.473175",
+   "eval_finished_at": "2026-09-19T03:27:17.714742",
+   "eval_result": {
+    "team_id": "T0009",
+    "team_name": "박진우(2022***67)",
+    "submission_time": "2026-09-19 02:59:57",
+    "eval_time": "2026-09-19 12:00:07",
+    "test_results": {
+     "P1": {
+      "prob_name": "P1",
+      "obj": 5498.23,
+      "time": 271.08351707458496,
+      "status": "ok",
+      "status_detail": "",
+      "exception": ""
+     },
+     "P2": {
+      "prob_name": "P2",
+      "obj": 8451.12,
+      "time": 271.0835790634155,
+      "status": "ok",
+      "status_detail": "",
+      "exception": ""
+     },
+     "P3": {
+      "prob_name": "P3",
+      "obj": 12966.02,
+      "time": 271.0900921821594,
+      "status": "ok",
+      "status_detail": "",
+      "exception": ""
+     },
+     "P4": {
+      "prob_name": "P4",
+      "obj": 6306.36,
+      "time": 271.0832529067993,
+      "status": "ok",
+      "status_detail": "",
+      "exception": ""
+     },
+     "P5": {
+      "prob_name": "P5",
+      "obj": 13276.58,
+      "time": 271.085244178772,
+      "status": "ok",
+      "status_detail": "",
+      "exception": ""
+     },
+     "P6": {
+      "prob_name": "P6",
+      "obj": 24207.73,
+      "time": 271.0872130393982,
+      "status": "ok",
+      "status_detail": "",
+      "exception": ""
+     }
+    }
+   }
+  },
+  {
+   "submission_id": 47,
+   "submitted_at": "2026-09-20T02:07:50",
+   "eval_status": "done",
+   "eval_started_at": "2026-09-20T02:08:06.521413",
+   "eval_finished_at": "2026-09-20T02:35:15.699782",
+   "eval_result": {
+    "team_id": "T0009",
+    "team_name": "박진우(2022***67)",
+    "submission_time": "2026-09-20 02:07:50",
+    "eval_time": "2026-09-20 11:08:06",
+    "test_results": {
+     "P1": {
+      "prob_name": "P1",
+      "obj": 5498.23,
+      "time": 271.0838086605072,
+      "status": "ok",
+      "status_detail": "",
+      "exception": ""
+     },
+     "P2": {
+      "prob_name": "P2",
+      "obj": 8467.65,
+      "time": 271.08587169647217,
+      "status": "ok",
+      "status_detail": "",
+      "exception": ""
+     },
+     "P3": {
+      "prob_name": "P3",
+      "obj": 12977.47,
+      "time": 271.0871648788452,
+      "status": "ok",
+      "status_detail": "",
+      "exception": ""
+     },
+     "P4": {
+      "prob_name": "P4",
+      "obj": 6363.83,
+      "time": 271.0825550556183,
+      "status": "ok",
+      "status_detail": "",
+      "exception": ""
+     },
+     "P5": {
+      "prob_name": "P5",
+      "obj": 13201.73,
+      "time": 271.0836555957794,
+      "status": "ok",
+      "status_detail": "",
+      "exception": ""
+     },
+     "P6": {
+      "prob_name": "P6",
+      "obj": 24094.44,
+      "time": 271.0854158401489,
+      "status": "ok",
+      "status_detail": "",
+      "exception": ""
+     }
+    }
+   }
+  },
+  {
+   "submission_id": 73,
+   "submitted_at": "2026-09-23T01:17:36",
+   "eval_status": "done",
+   "eval_started_at": "2026-09-23T01:17:45.882511",
+   "eval_finished_at": "2026-09-23T01:44:55.014615",
+   "eval_result": {
+    "team_id": "T0009",
+    "team_name": "박진우(2022***67)",
+    "submission_time": "2026-09-23 01:17:36",
+    "eval_time": "2026-09-23 10:17:45",
+    "test_results": {
+     "P1": {
+      "prob_name": "P1",
+      "obj": 5498.23,
+      "time": 271.0833010673523,
+      "status": "ok",
+      "status_detail": "",
+      "exception": ""
+     },
+     "P2": {
+      "prob_name": "P2",
+      "obj": 8461.02,
+      "time": 271.08422660827637,
+      "status": "ok",
+      "status_detail": "",
+      "exception": ""
+     },
+     "P3": {
+      "prob_name": "P3",
+      "obj": 12982.26,
+      "time": 271.08560395240784,
+      "status": "ok",
+      "status_detail": "",
+      "exception": ""
+     },
+     "P4": {
+      "prob_name": "P4",
+      "obj": 6333.2,
+      "time": 271.0832097530365,
+      "status": "ok",
+      "status_detail": "",
+      "exception": ""
+     },
+     "P5": {
+      "prob_name": "P5",
+      "obj": 13167.2,
+      "time": 271.0851061344147,
+      "status": "ok",
+      "status_detail": "",
+      "exception": ""
+     },
+     "P6": {
+      "prob_name": "P6",
+      "obj": 24135.15,
+      "time": 271.088849067688,
+      "status": "ok",
+      "status_detail": "",
+      "exception": ""
+     }
+    }
+   }
+  },
+  {
+   "submission_id": 91,
+   "submitted_at": "2026-09-25T04:05:51",
+   "eval_status": "done",
+   "eval_started_at": "2026-09-25T04:06:04.612127",
+   "eval_finished_at": "2026-09-25T04:33:13.641826",
+   "eval_result": {
+    "team_id": "T0009",
+    "team_name": "박진우(2022***67)",
+    "submission_time": "2026-09-25 04:05:51",
+    "eval_time": "2026-09-25 13:06:04",
+    "test_results": {
+     "P1": {
+      "prob_name": "P1",
+      "obj": 5517.71,
+      "time": 271.0845112800598,
+      "status": "ok",
+      "status_detail": "",
+      "exception": ""
+     },
+     "P2": {
+      "prob_name": "P2",
+      "obj": 8398.99,
+      "time": 271.0900411605835,
+      "status": "ok",
+      "status_detail": "",
+      "exception": ""
+     },
+     "P3": {
+      "prob_name": "P3",
+      "obj": 12963.14,
+      "time": 271.0870416164398,
+      "status": "ok",
+      "status_detail": "",
+      "exception": ""
+     },
+     "P4": {
+      "prob_name": "P4",
+      "obj": 6331.62,
+      "time": 271.0838532447815,
+      "status": "ok",
+      "status_detail": "",
+      "exception": ""
+     },
+     "P5": {
+      "prob_name": "P5",
+      "obj": 13146.37,
+      "time": 271.0860171318054,
+      "status": "ok",
+      "status_detail": "",
+      "exception": ""
+     },
+     "P6": {
+      "prob_name": "P6",
+      "obj": 24107.92,
+      "time": 271.0893862247467,
+      "status": "ok",
+      "status_detail": "",
+      "exception": ""
+     }
+    }
+   }
+  },
+  {
+   "submission_id": 102,
+   "submitted_at": "2026-09-28T03:11:31",
+   "eval_status": "done",
+   "eval_started_at": "2026-09-28T03:11:42.590466",
+   "eval_finished_at": "2026-09-28T03:38:51.719526",
+   "eval_result": {
+    "team_id": "T0009",
+    "team_name": "박진우(2022***67)",
+    "submission_time": "2026-09-28 03:11:31",
+    "eval_time": "2026-09-28 12:11:42",
+    "test_results": {
+     "P1": {
+      "prob_name": "P1",
+      "obj": 5498.23,
+      "time": 271.0838544368744,
+      "status": "ok",
+      "status_detail": "",
+      "exception": ""
+     },
+     "P2": {
+      "prob_name": "P2",
+      "obj": 8454.31,
+      "time": 271.0858199596405,
+      "status": "ok",
+      "status_detail": "",
+      "exception": ""
+     },
+     "P3": {
+      "prob_name": "P3",
+      "obj": 12946.62,
+      "time": 271.0924994945526,
+      "status": "ok",
+      "status_detail": "",
+      "exception": ""
+     },
+     "P4": {
+      "prob_name": "P4",
+      "obj": 6342.64,
+      "time": 271.0838146209717,
+      "status": "ok",
+      "status_detail": "",
+      "exception": ""
+     },
+     "P5": {
+      "prob_name": "P5",
+      "obj": 13073.56,
+      "time": 271.08755469322205,
+      "status": "ok",
+      "status_detail": "",
+      "exception": ""
+     },
+     "P6": {
+      "prob_name": "P6",
+      "obj": 24077.9,
+      "time": 271.0955340862274,
+      "status": "ok",
+      "status_detail": "",
+      "exception": ""
+     }
+    }
+   }
+  },
+  {
+   "submission_id": 262,
+   "submitted_at": "2026-10-12T12:48:16",
+   "eval_status": "done",
+   "eval_started_at": "2026-10-12T12:48:31.365909",
+   "eval_finished_at": "2026-10-12T13:15:40.263599",
+   "eval_result": {
+    "team_id": "T0009",
+    "team_name": "박진우(2022***67)",
+    "submission_time": "2026-10-12 12:48:16",
+    "eval_time": "2026-10-12 21:48:30",
+    "test_results": {
+     "P1": {
+      "prob_name": "P1",
+      "obj": 5498.23,
+      "time": 271.0843291282654,
+      "status": "ok",
+      "status_detail": "",
+      "exception": ""
+     },
+     "P2": {
+      "prob_name": "P2",
+      "obj": 8408.24,
+      "time": 271.0873339176178,
+      "status": "ok",
+      "status_detail": "",
+      "exception": ""
+     },
+     "P3": {
+      "prob_name": "P3",
+      "obj": 12951.31,
+      "time": 271.09231305122375,
+      "status": "ok",
+      "status_detail": "",
+      "exception": ""
+     },
+     "P4": {
+      "prob_name": "P4",
+      "obj": 6331.62,
+      "time": 271.08471512794495,
+      "status": "ok",
+      "status_detail": "",
+      "exception": ""
+     },
+     "P5": {
+      "prob_name": "P5",
+      "obj": 13162.32,
+      "time": 271.08699917793274,
+      "status": "ok",
+      "status_detail": "",
+      "exception": ""
+     },
+     "P6": {
+      "prob_name": "P6",
+      "obj": 24183.01,
+      "time": 271.0968539714813,
+      "status": "ok",
+      "status_detail": "",
+      "exception": ""
+     }
+    }
+   }
+  },
+  {
+   "submission_id": 274,
+   "submitted_at": "2026-10-13T01:00:00",
+   "eval_status": "done",
+   "eval_started_at": "2026-10-13T01:14:47.632357",
+   "eval_finished_at": "2026-10-13T01:41:51.810173",
+   "eval_result": {
+    "team_id": "T0009",
+    "team_name": "박진우(2022***67)",
+    "submission_time": "2026-10-13 01:00:00",
+    "eval_time": "2026-10-13 10:14:42",
+    "test_results": {
+     "P1": {
+      "prob_name": "P1",
+      "obj": 5498.23,
+      "time": 271.0850818157196,
+      "status": "ok",
+      "status_detail": "",
+      "exception": ""
+     },
+     "P2": {
+      "prob_name": "P2",
+      "obj": 8401.65,
+      "time": 271.08639550209045,
+      "status": "ok",
+      "status_detail": "",
+      "exception": ""
+     },
+     "P3": {
+      "prob_name": "P3",
+      "obj": 12957.23,
+      "time": 271.09329771995544,
+      "status": "ok",
+      "status_detail": "",
+      "exception": ""
+     },
+     "P4": {
+      "prob_name": "P4",
+      "obj": 6340.62,
+      "time": 271.08393573760986,
+      "status": "ok",
+      "status_detail": "",
+      "exception": ""
+     },
+     "P5": {
+      "prob_name": "P5",
+      "obj": 13142.97,
+      "time": 271.0888841152191,
+      "status": "ok",
+      "status_detail": "",
+      "exception": ""
+     },
+     "P6": {
+      "prob_name": "P6",
+      "obj": 24086.9,
+      "time": 271.0958163738251,
+      "status": "ok",
+      "status_detail": "",
+      "exception": ""
+     }
+    }
+   }
+  },
+  {
+   "submission_id": 316,
+   "submitted_at": "2026-10-14T13:55:36",
+   "eval_status": "done",
+   "eval_started_at": "2026-10-14T14:11:11.269669",
+   "eval_finished_at": "2026-10-14T14:38:15.738981",
+   "eval_result": {
+    "team_id": "T0009",
+    "team_name": "박진우(2022***67)",
+    "submission_time": "2026-10-14 13:55:36",
+    "eval_time": "2026-10-14 23:11:06",
+    "test_results": {
+     "P1": {
+      "prob_name": "P1",
+      "obj": 5498.23,
+      "time": 271.08378052711487,
+      "status": "ok",
+      "status_detail": "",
+      "exception": ""
+     },
+     "P2": {
+      "prob_name": "P2",
+      "obj": 8394.51,
+      "time": 271.08973002433777,
+      "status": "ok",
+      "status_detail": "",
+      "exception": ""
+     },
+     "P3": {
+      "prob_name": "P3",
+      "obj": 12937.59,
+      "time": 271.1001408100128,
+      "status": "ok",
+      "status_detail": "",
+      "exception": ""
+     },
+     "P4": {
+      "prob_name": "P4",
+      "obj": 6323.69,
+      "time": 271.0838632583618,
+      "status": "ok",
+      "status_detail": "",
+      "exception": ""
+     },
+     "P5": {
+      "prob_name": "P5",
+      "obj": 13068.1,
+      "time": 271.09233379364014,
+      "status": "ok",
+      "status_detail": "",
+      "exception": ""
+     },
+     "P6": {
+      "prob_name": "P6",
+      "obj": 24040.51,
+      "time": 271.10381054878235,
+      "status": "ok",
+      "status_detail": "",
+      "exception": ""
+     }
+    }
+   }
+  }
+ ]
+}

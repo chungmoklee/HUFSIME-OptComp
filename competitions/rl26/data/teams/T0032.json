@@ -1,0 +1,447 @@
+{
+ "generated_at": "2026-11-09 05:00:00 UTC",
+ "team_id": "T0032",
+ "submissions": [
+  {
+   "submission_id": 222,
+   "submitted_at": "2026-10-10T12:37:55",
+   "eval_status": "done",
+   "eval_started_at": "2026-10-10T12:38:24.097458",
+   "eval_finished_at": "2026-10-10T12:38:26.314301",
+   "eval_result": {
+    "team_id": "T0032",
+    "team_name": "이유진(2023***50)",
+    "submission_time": "2026-10-10 12:37:55",
+    "eval_time": "2026-10-10 21:38:23",
+    "test_results": {
+     "P1": {
+      "prob_name": "P1",
+      "obj": -1,
+      "time": 0.0023851394653320312,
+      "status": "algo_error",
+      "status_detail": "",
+      "exception": "module 'utils' has no attribute 'check_solution'"
+     },
+     "P2": {
+      "prob_name": "P2",
+      "obj": -1,
+      "time": 0.009195566177368164,
+      "status": "algo_error",
+      "status_detail": "",
+      "exception": "module 'utils' has no attribute 'check_solution'"
+     },
+     "P3": {
+      "prob_name": "P3",
+      "obj": -1,
+      "time": 0.03017401695251465,
+      "status": "algo_error",
+      "status_detail": "",
+      "exception": "module 'utils' has no attribute 'check_solution'"
+     },
+     "P4": {
+      "prob_name": "P4",
+      "obj": -1,
+      "time": 0.0038671493530273438,
+      "status": "algo_error",
+      "status_detail": "",
+      "exception": "module 'utils' has no attribute 'check_solution'"
+     },
+     "P5": {
+      "prob_name": "P5",
+      "obj": -1,
+      "time": 0.01466679573059082,
+      "status": "algo_error",
+      "status_detail": "",
+      "exception": "module 'utils' has no attribute 'check_solution'"
+     },
+     "P6": {
+      "prob_name": "P6",
+      "obj": -1,
+      "time": 0.038197994232177734,
+      "status": "algo_error",
+      "status_detail": "",
+      "exception": "module 'utils' has no attribute 'check_solution'"
+     }
+    }
+   }
+  },
+  {
+   "submission_id": 229,
+   "submitted_at": "2026-10-11T00:39:10",
+   "eval_status": "done",
+   "eval_started_at": "2026-10-11T00:39:31.636778",
+   "eval_finished_at": "2026-10-11T00:40:04.324128",
+   "eval_result": {
+    "team_id": "T0032",
+    "team_name": "이유진(2023***50)",
+    "submission_time": "2026-10-11 00:39:10",
+    "eval_time": "2026-10-11 09:39:29",
+    "test_results": {
+     "P1": {
+      "prob_name": "P1",
+      "obj": 7006.27,
+      "time": 0.029002904891967773,
+      "status": "ok",
+      "status_detail": "",
+      "exception": ""
+     },
+     "P2": {
+      "prob_name": "P2",
+      "obj": 12937.22,
+      "time": 0.24318671226501465,
+      "status": "ok",
+      "status_detail": "",
+      "exception": ""
+     },
+     "P3": {
+      "prob_name": "P3",
+      "obj": 19604.35,
+      "time": 5.3545544147491455,
+      "status": "ok",
+      "status_detail": "",
+      "exception": ""
+     },
+     "P4": {
+      "prob_name": "P4",
+      "obj": 8125.03,
+      "time": 0.09665846824645996,
+      "status": "ok",
+      "status_detail": "",
+      "exception": ""
+     },
+     "P5": {
+      "prob_name": "P5",
+      "obj": 20411.6,
+      "time": 2.893913984298706,
+      "status": "ok",
+      "status_detail": "",
+      "exception": ""
+     },
+     "P6": {
+      "prob_name": "P6",
+      "obj": 34605.26,
+      "time": 23.081607818603516,
+      "status": "ok",
+      "status_detail": "",
+      "exception": ""
+     }
+    }
+   }
+  },
+  {
+   "submission_id": 242,
+   "submitted_at": "2026-10-11T12:40:14",
+   "eval_status": "done",
+   "eval_started_at": "2026-10-11T12:40:36.774911",
+   "eval_finished_at": "2026-10-11T12:42:53.520715",
+   "eval_result": {
+    "team_id": "T0032",
+    "team_name": "이유진(2023***50)",
+    "submission_time": "2026-10-11 12:40:14",
+    "eval_time": "2026-10-11 21:40:36",
+    "test_results": {
+     "P1": {
+      "prob_name": "P1",
+      "obj": 6270.68,
+      "time": 0.43805408477783203,
+      "status": "ok",
+      "status_detail": "",
+      "exception": ""
+     },
+     "P2": {
+      "prob_name": "P2",
+      "obj": 11071.02,
+      "time": 3.183306932449341,
+      "status": "ok",
+      "status_detail": "",
+      "exception": ""
+     },
+     "P3": {
+      "prob_name": "P3",
+      "obj": 16505.63,
+      "time": 26.954044580459595,
+      "status": "ok",
+      "status_detail": "",
+      "exception": ""
+     },
+     "P4": {
+      "prob_name": "P4",
+      "obj": 6806.87,
+      "time": 1.5218522548675537,
+      "status": "ok",
+      "status_detail": "",
+      "exception": ""
+     },
+     "P5": {
+      "prob_name": "P5",
+      "obj": 15820.88,
+      "time": 13.095110416412354,
+      "status": "ok",
+      "status_detail": "",
+      "exception": ""
+     },
+     "P6": {
+      "prob_name": "P6",
+      "obj": 27594.4,
+      "time": 89.37628698348999,
+      "status": "ok",
+      "status_detail": "",
+      "exception": ""
+     }
+    }
+   }
+  },
+  {
+   "submission_id": 250,
+   "submitted_at": "2026-10-12T00:42:00",
+   "eval_status": "done",
+   "eval_started_at": "2026-10-12T00:43:27.057863",
+   "eval_finished_at": "2026-10-12T00:50:41.588089",
+   "eval_result": {
+    "team_id": "T0032",
+    "team_name": "이유진(2023***50)",
+    "submission_time": "2026-10-12 00:42:00",
+    "eval_time": "2026-10-12 09:43:26",
+    "test_results": {
+     "P1": {
+      "prob_name": "P1",
+      "obj": 5518.54,
+      "time": 3.3859198093414307,
+      "status": "ok",
+      "status_detail": "",
+      "exception": ""
+     },
+     "P2": {
+      "prob_name": "P2",
+      "obj": 8914.09,
+      "time": 33.37923073768616,
+      "status": "ok",
+      "status_detail": "",
+      "exception": ""
+     },
+     "P3": {
+      "prob_name": "P3",
+      "obj": 13429.47,
+      "time": 162.08196806907654,
+      "status": "ok",
+      "status_detail": "",
+      "exception": ""
+     },
+     "P4": {
+      "prob_name": "P4",
+      "obj": 6502.01,
+      "time": 8.240233182907104,
+      "status": "ok",
+      "status_detail": "",
+      "exception": ""
+     },
+     "P5": {
+      "prob_name": "P5",
+      "obj": 13401.81,
+      "time": 43.29091429710388,
+      "status": "ok",
+      "status_detail": "",
+      "exception": ""
+     },
+     "P6": {
+      "prob_name": "P6",
+      "obj": 25202.14,
+      "time": 181.8440124988556,
+      "status": "ok",
+      "status_detail": "",
+      "exception": ""
+     }
+    }
+   }
+  },
+  {
+   "submission_id": 263,
+   "submitted_at": "2026-10-12T12:50:38",
+   "eval_status": "done",
+   "eval_started_at": "2026-10-12T12:50:58.899091",
+   "eval_finished_at": "2026-10-12T13:17:01.651497",
+   "eval_result": {
+    "team_id": "T0032",
+    "team_name": "이유진(2023***50)",
+    "submission_time": "2026-10-12 12:50:38",
+    "eval_time": "2026-10-12 21:50:58",
+    "test_results": {
+     "P1": {
+      "prob_name": "P1",
+      "obj": 5498.23,
+      "time": 260.0329520702362,
+      "status": "ok",
+      "status_detail": "",
+      "exception": ""
+     },
+     "P2": {
+      "prob_name": "P2",
+      "obj": 8647.93,
+      "time": 260.0583384037018,
+      "status": "ok",
+      "status_detail": "",
+      "exception": ""
+     },
+     "P3": {
+      "prob_name": "P3",
+      "obj": 13324.54,
+      "time": 260.2870044708252,
+      "status": "ok",
+      "status_detail": "",
+      "exception": ""
+     },
+     "P4": {
+      "prob_name": "P4",
+      "obj": 6400.29,
+      "time": 260.02284955978394,
+      "status": "ok",
+      "status_detail": "",
+      "exception": ""
+     },
+     "P5": {
+      "prob_name": "P5",
+      "obj": 13163.09,
+      "time": 260.1034553050995,
+      "status": "ok",
+      "status_detail": "",
+      "exception": ""
+     },
+     "P6": {
+      "prob_name": "P6",
+      "obj": 25080.8,
+      "time": 260.3704581260681,
+      "status": "ok",
+      "status_detail": "",
+      "exception": ""
+     }
+    }
+   }
+  },
+  {
+   "submission_id": 273,
+   "submitted_at": "2026-10-13T00:52:00",
+   "eval_status": "done",
+   "eval_started_at": "2026-10-13T00:53:01.480877",
+   "eval_finished_at": "2026-10-13T01:19:03.942240",
+   "eval_result": {
+    "team_id": "T0032",
+    "team_name": "이유진(2023***50)",
+    "submission_time": "2026-10-13 00:52:00",
+    "eval_time": "2026-10-13 09:53:00",
+    "test_results": {
+     "P1": {
+      "prob_name": "P1",
+      "obj": 5498.23,
+      "time": 260.03235030174255,
+      "status": "ok",
+      "status_detail": "",
+      "exception": ""
+     },
+     "P2": {
+      "prob_name": "P2",
+      "obj": 8570.78,
+      "time": 260.0204141139984,
+      "status": "ok",
+      "status_detail": "",
+      "exception": ""
+     },
+     "P3": {
+      "prob_name": "P3",
+      "obj": 13322.72,
+      "time": 260.1057450771332,
+      "status": "ok",
+      "status_detail": "",
+      "exception": ""
+     },
+     "P4": {
+      "prob_name": "P4",
+      "obj": 6333.03,
+      "time": 260.01025676727295,
+      "status": "ok",
+      "status_detail": "",
+      "exception": ""
+     },
+     "P5": {
+      "prob_name": "P5",
+      "obj": 13156.6,
+      "time": 260.0293836593628,
+      "status": "ok",
+      "status_detail": "",
+      "exception": ""
+     },
+     "P6": {
+      "prob_name": "P6",
+      "obj": 24447.76,
+      "time": 260.15404319763184,
+      "status": "ok",
+      "status_detail": "",
+      "exception": ""
+     }
+    }
+   }
+  },
+  {
+   "submission_id": 301,
+   "submitted_at": "2026-10-14T00:25:03",
+   "eval_status": "done",
+   "eval_started_at": "2026-10-14T00:25:28.013157",
+   "eval_finished_at": "2026-10-14T00:51:30.097540",
+   "eval_result": {
+    "team_id": "T0032",
+    "team_name": "이유진(2023***50)",
+    "submission_time": "2026-10-14 00:25:03",
+    "eval_time": "2026-10-14 09:25:27",
+    "test_results": {
+     "P1": {
+      "prob_name": "P1",
+      "obj": 5498.23,
+      "time": 260.0389597415924,
+      "status": "ok",
+      "status_detail": "",
+      "exception": ""
+     },
+     "P2": {
+      "prob_name": "P2",
+      "obj": 8589.83,
+      "time": 260.0311453342438,
+      "status": "ok",
+      "status_detail": "",
+      "exception": ""
+     },
+     "P3": {
+      "prob_name": "P3",
+      "obj": 13426.72,
+      "time": 260.10541915893555,
+      "status": "ok",
+      "status_detail": "",
+      "exception": ""
+     },
+     "P4": {
+      "prob_name": "P4",
+      "obj": 6293.28,
+      "time": 259.76806259155273,
+      "status": "ok",
+      "status_detail": "",
+      "exception": ""
+     },
+     "P5": {
+      "prob_name": "P5",
+      "obj": 13090.88,
+      "time": 260.0425250530243,
+      "status": "ok",
+      "status_detail": "",
+      "exception": ""
+     },
+     "P6": {
+      "prob_name": "P6",
+      "obj": 24252.64,
+      "time": 260.1275634765625,
+      "status": "ok",
+      "status_detail": "",
+      "exception": ""
+     }
+    }
+   }
+  }
+ ]
+}
