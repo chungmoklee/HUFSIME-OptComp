@@ -1,6 +1,6 @@
 "use strict";
 // 스냅샷 정적 페이지.
-//   competitions.json                       대회 목록 (최신이 첫 항목)
+//   competitions.json                       대회 목록 (최신이 첫 항목) + 진행 중인 대회(active)
 //   competitions/<대회>/data/index.json     그 대회의 스냅샷 목록
 //   competitions/<대회>/data/<종류>/<날짜>/<시각>.json
 //   competitions/<대회>/data/teams/<팀ID>.json
@@ -8,7 +8,7 @@
 
 const $ = (s) => document.querySelector(s);
 const state = {
-  comps: [], comp: null, index: null, kind: "leaderboard", rows: [], tz: "UTC", ms: null,
+  comps: [], active: null, comp: null, index: null, kind: "leaderboard", rows: [], tz: "UTC", ms: null,
   view: "board", history: null, metric: "rank", span: 0, sel: new Set(), hover: null,
   dash: null, prob: null, teamAll: false
 };
@@ -851,6 +851,7 @@ function bind() {
   try {
     const reg = await getJSON("competitions.json");
     state.comps = reg.competitions || [];
+    state.active = reg.active || null;
     if (!state.comps.length) throw new Error("no competitions");
   } catch {
     $("#empty").hidden = false;
@@ -863,12 +864,17 @@ function bind() {
   state.tz = (tz === "KST" || tz === "UTC") ? tz : defaultTz();
   $("#sel-tz").value = state.tz;
 
-  // competitions.json 은 최신 대회가 첫 항목이다 — 그것을 기본 선택한다.
+  // 표시 이름(label)은 대회마다 같을 수 있어 대회 이름(name)으로 구분한다.
+  // 진행 중인 대회(active)를 기본 선택하고, 없으면 첫 항목(최신 대회)을 쓴다.
+  const first = state.comps.some((c) => c.name === state.active)
+    ? state.active : state.comps[0].name;
   $("#sel-comp").innerHTML = state.comps
-    .map((c) => `<option value="${c.name}">${c.label || c.name}</option>`).join("");
+    .map((c) => `<option value="${esc(c.name)}" title="${esc(c.label || c.name)}">`
+      + `${esc(c.name)}${c.name === state.active ? " (진행 중)" : ""}</option>`).join("");
+  $("#sel-comp").value = first;
   bind();
   try {
-    await loadCompetition(state.comps[0].name);
+    await loadCompetition(first);
   } catch {
     $("#empty").hidden = false;
     $("#empty").textContent = "데이터를 불러오지 못했습니다.";

@@ -1,10 +1,11 @@
 {
+ "active": "rl26",
  "competitions": [
   {
    "name": "rl26",
    "label": "2026 HUFS-IME Optimization Challenge",
-   "updated_at": "20261113/20261113_08",
-   "teams": 27
+   "updated_at": "20261113/20261113_09",
+   "teams": 0
   },
   {
    "name": "opt26",
