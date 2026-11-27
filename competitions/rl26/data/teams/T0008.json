@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-27 03:00:00 UTC",
+ "generated_at": "2026-11-27 15:00:00 UTC",
  "team_id": "T0008",
  "submissions": [
   {
@@ -185,6 +185,101 @@
       "prob_name": "P10",
       "obj": 2408.6100000000006,
       "time": 4.127024173736572,
+      "status": "ok",
+      "status_detail": "",
+      "exception": ""
+     }
+    }
+   }
+  },
+  {
+   "submission_id": 74,
+   "submitted_at": "2026-11-27T14:28:23",
+   "eval_status": "done",
+   "eval_started_at": "2026-11-27T14:28:32.463983",
+   "eval_finished_at": "2026-11-27T14:28:55.994421",
+   "eval_result": {
+    "team_id": "T0008",
+    "team_name": "박규도(2022***10)",
+    "submission_time": "2026-11-27 14:28:23",
+    "eval_time": "2026-11-27 23:28:31",
+    "test_results": {
+     "P1": {
+      "prob_name": "P1",
+      "obj": 3705.9699999999993,
+      "time": 4.956308841705322,
+      "status": "ok",
+      "status_detail": "",
+      "exception": ""
+     },
+     "P2": {
+      "prob_name": "P2",
+      "obj": 2331.7999999999997,
+      "time": 0.8633723258972168,
+      "status": "ok",
+      "status_detail": "",
+      "exception": ""
+     },
+     "P3": {
+      "prob_name": "P3",
+      "obj": 3332.6499999999996,
+      "time": 4.147454738616943,
+      "status": "ok",
+      "status_detail": "",
+      "exception": ""
+     },
+     "P4": {
+      "prob_name": "P4",
+      "obj": 1235.72,
+      "time": 0.18455958366394043,
+      "status": "ok",
+      "status_detail": "",
+      "exception": ""
+     },
+     "P5": {
+      "prob_name": "P5",
+      "obj": 1247.02,
+      "time": 0.16030573844909668,
+      "status": "ok",
+      "status_detail": "",
+      "exception": ""
+     },
+     "P6": {
+      "prob_name": "P6",
+      "obj": 3475.499999999999,
+      "time": 1.8187193870544434,
+      "status": "ok",
+      "status_detail": "",
+      "exception": ""
+     },
+     "P7": {
+      "prob_name": "P7",
+      "obj": 3555.7199999999993,
+      "time": 4.761650562286377,
+      "status": "ok",
+      "status_detail": "",
+      "exception": ""
+     },
+     "P8": {
+      "prob_name": "P8",
+      "obj": 1171.3400000000001,
+      "time": 0.10965681076049805,
+      "status": "ok",
+      "status_detail": "",
+      "exception": ""
+     },
+     "P9": {
+      "prob_name": "P9",
+      "obj": 2979.0799999999995,
+      "time": 1.6816797256469727,
+      "status": "ok",
+      "status_detail": "",
+      "exception": ""
+     },
+     "P10": {
+      "prob_name": "P10",
+      "obj": 2519.48,
+      "time": 1.2254061698913574,
       "status": "ok",
       "status_detail": "",
       "exception": ""
