@@ -1,0 +1,101 @@
+{
+ "generated_at": "2026-11-27 09:00:00 UTC",
+ "team_id": "T0007",
+ "submissions": [
+  {
+   "submission_id": 72,
+   "submitted_at": "2026-11-27T08:40:57",
+   "eval_status": "done",
+   "eval_started_at": "2026-11-27T08:41:10.941901",
+   "eval_finished_at": "2026-11-27T08:41:16.130283",
+   "eval_result": {
+    "team_id": "T0007",
+    "team_name": "최원태(2021***02)",
+    "submission_time": "2026-11-27 08:40:57",
+    "eval_time": "2026-11-27 17:41:10",
+    "test_results": {
+     "P1": {
+      "prob_name": "P1",
+      "obj": 3720.8099999999995,
+      "time": 0.32181262969970703,
+      "status": "ok",
+      "status_detail": "",
+      "exception": ""
+     },
+     "P2": {
+      "prob_name": "P2",
+      "obj": 2259.6800000000003,
+      "time": 0.09807944297790527,
+      "status": "ok",
+      "status_detail": "",
+      "exception": ""
+     },
+     "P3": {
+      "prob_name": "P3",
+      "obj": 3285.9500000000003,
+      "time": 0.2601332664489746,
+      "status": "ok",
+      "status_detail": "",
+      "exception": ""
+     },
+     "P4": {
+      "prob_name": "P4",
+      "obj": 1361.25,
+      "time": 0.03640604019165039,
+      "status": "ok",
+      "status_detail": "",
+      "exception": ""
+     },
+     "P5": {
+      "prob_name": "P5",
+      "obj": 1228.45,
+      "time": 0.04339957237243652,
+      "status": "ok",
+      "status_detail": "",
+      "exception": ""
+     },
+     "P6": {
+      "prob_name": "P6",
+      "obj": 3287.9700000000003,
+      "time": 0.1884315013885498,
+      "status": "ok",
+      "status_detail": "",
+      "exception": ""
+     },
+     "P7": {
+      "prob_name": "P7",
+      "obj": 3857.4999999999995,
+      "time": 0.3422360420227051,
+      "status": "ok",
+      "status_detail": "",
+      "exception": ""
+     },
+     "P8": {
+      "prob_name": "P8",
+      "obj": 1237.85,
+      "time": 0.02950000762939453,
+      "status": "ok",
+      "status_detail": "",
+      "exception": ""
+     },
+     "P9": {
+      "prob_name": "P9",
+      "obj": 2997.8199999999997,
+      "time": 0.1524491310119629,
+      "status": "ok",
+      "status_detail": "",
+      "exception": ""
+     },
+     "P10": {
+      "prob_name": "P10",
+      "obj": 2405.62,
+      "time": 0.12233638763427734,
+      "status": "ok",
+      "status_detail": "",
+      "exception": ""
+     }
+    }
+   }
+  }
+ ]
+}
